@@ -34,6 +34,7 @@
 
 **Physical aim rule for the front bar:** tip DOWN = pool toward the speakers, UP = toward the ball, left/right = across the floor.
 
+- **Pocket White (row 5, slot 4), made 2026-10-20:** only the Pocket Beam, white chip only (R/G/B 0, W 255), full, Tiny Ball. For aiming it.
 - **Haze Low / Haze Med / Haze High (row 5, slots 1-3), made 2026-10-20:** only the hazer (W Haze 141). Smoke 40 / 100 / 180, Fan 255 in all three (Tony: fan always 100%, smoke varied by hand). Part of Tony's toolkit of static looks to layer over the Autoloops. The Control One also has a SMOKE button; whether it runs the fan at 100% isn't checked yet.
 
 ## Toolkit on the Control One (from the quickstart guide, `manuals/soundswitch-control-one-quickstart-guide.pdf`)
@@ -57,7 +58,7 @@
 | 841 Logo | Spot 1 with the custom 841 gobo (value 36) on the white block wall behind the bar, spinning slowly (Gobo Rotation 10, about one turn every 9 s). | Done 2026-10-06; Tony: "Perfect." The plan was the floor in front of the speakers, but the logo wouldn't focus well on the floor, so Tony aimed it at the bar's back wall himself and focused it. Spot 1 crosshair: 578, 471 (old frame). The slow spin means it reads upright once per turn; to hold it still and upright, turn the gobo 180° in its holder. Only Spot 1 is aimed: every other mover sits at grid center in this position, so don't use it in an Autoloop. |
 | (idea) Mini bar | A Spot on the mini bar. Tony may turn the mini bar into a DJ booth, which would change what this position should light. | Later |
 
-The Pocket Beam is on the tiny ball (429, 509) in **every** position, so it always lights it.
+The Pocket Beam is on the tiny ball in **every** position except Ball, so it always lights it. **Re-aimed 2026-10-20** after Tony hung it upside down and moved it: Tiny Ball aimed by Tony, then the same aim (Positions window grid, dot at 228, 443 in the 872x485 window) copied into Floor Center, Front of Floor, Back of Floor, Cross and Lanes. Ball: Tony aiming by eye. Use the **Pocket White** look (Bank 4 row 5 slot 4) while aiming: plain white shows three colored spots.
 
 ## Crosshair values (Edit Positions grid, screen pixels)
 These were read off the grid on the MacBook's screen. The grid center is about (510, 404), and the grid spans about ±164 px. Use them as starting points, not DMX values. They are relative to the dialog's position: if the SoundSwitch window moves, shift them by the same amount (on 2026-10-06 the window sat 25 px lower, so every Y was +25).
