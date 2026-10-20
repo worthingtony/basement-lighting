@@ -52,6 +52,12 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 
 ## Fixture Manager (separate app)
 - Profiles have attribute, channel and range, but **no default values**.
+- **Shortcuts:** Cmd-S is **Save Fixture As** (exports a .plfix); **Shift-Cmd-S is Save Workspace**.
+- **Copy a library profile into the workspace by dragging** its row from the Fixture Library onto the Workspace list (a click or double-click does nothing). Search the manufacturer first: the Vortex is under **Eliminator Lighting**, model "Vortex".
+- **Rename** a workspace copy in its Model field; the GUID stays the stock one, so Update Fixtures applies it to fixtures already patched with the stock profile.
+- **Wheel slots:** the Name fills itself in from the hex code. "+" only adds a slot when there's free range after the last slot's end, so shorten the last range first.
+- **Attribute and wheel cells:** double-click to edit; Cmd-A, type, Return.
+- The workspace (`~/Library/Application Support/inMusicBrands/FixtureLibrary/Workspace.db`) and .plfix exports are encrypted, so profiles can't be written by a script.
 - After editing a profile:
   1. File > Save Workspace in Fixture Manager.
   2. Options > Update Fixtures in SoundSwitch. **Save the project first**, because this can crash to the home screen, and it can also reset fixture names and groups.
@@ -77,6 +83,7 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
   - **Stacked dots:** a new position puts every fixture at grid center. A drag grabs the topmost dot there, whichever fixture row is selected. Move dots one at a time and check which fixture got selected.
   - The Position dropdown in a look lists THRU, the positions in creation order, and any new one at the bottom.
 - **Typing an attribute value:** double-click the number next to an attribute slider (for example Gobo Wheel), press Cmd-A, type the value, then Return. That's more precise than the short slider, which runs 0-255.
+- **Static look edits save themselves:** changing a look in Perform mode writes the project's `SoundSwitchVenues.bin` right away, with no Save.
 - **Active Static Looks panel:** the eye icon toggles a look. **Clear all** turns every static look off. An active static look overrides the Autoloops on the fixtures it includes.
 
 ## How positions, looks and Autoloops fit together
