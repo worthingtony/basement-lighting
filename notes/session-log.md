@@ -78,3 +78,4 @@
 - **Saved Claude-1020.ssproj** (copy of Claude-2100; SoundSwitch quit right after Save Project As, then reopened fine). **Options > Update Fixtures** on Claude-1020: "9 fixtures were automatically updated" (six 110s, Vortex, F2, F4). All nine lost their names, types and groups; restored from `rig.md` (110s Mover Secondary G1-G3, F2/F4 Mover Primary G2, Vortex Mover Tertiary G1) and saved 17:14. Claude-2100 is untouched.
 - Not checked yet: whether the existing Autoloops' per-fixture programming and the Vortex static looks survived the update.
 - Tony: talk through how the shows should work before programming anything more (notes in `stacks.md`, 2026-10-20).
+- **17:45-18:05** Hazer fixed: a wrong DIP switch. Z-350 manual saved in `manuals/`. Tested from CAL Test (Bank 4) with Smoke 120 / Fan 120: fan followed DMX, LED went flashing amber. CAL Test now includes the hazer.

@@ -1,6 +1,7 @@
 # Fixes and open issues
 
 ## Fixes made
+- **Hazer W Haze 141 now runs on DMX (2026-10-20).** A DIP switch was set wrong. For 141 the Antari Z-350 needs DIP **1, 3, 4, 8 ON** (1+4+8+128), the rest OFF. Fan slowing when the wireless dongle is plugged in = DMX has taken over; LED solid amber = DMX mode, flashing amber = making haze. ch1 haze 5-255 = 1-100%, ch2 fan 5-255 = 21-100%. Warm-up about 4.5 min. Manual: `manuals/antari-z-350-fazer-user-manual.pdf`.
 - **Scan 110s and Vortex can take color from the Autoloops (2026-10-20).** Custom profiles "Intimidator Scan 110 Claude" and "Vortex Claude" map their colored gobo wheels as color wheels (`notes/gobos.md`), applied with Update Fixtures on Claude-1020. The 110 strobe range is capped at 131.
 - **Shocker glowed at idle.** Its 5ch profile left ch 4-5 unmapped, which fired Auto Program. Fixed by moving it from 136 to 417 in 8ch Mode 3 (the unit was re-addressed).
 - **F4 Scan360 315 did a slow strobe.** The profile's strobe range had R start 8. Changed it to 4 in Fixture Manager, since 4-7 = open. Then File > Save Workspace, then Options > Update Fixtures.
@@ -22,7 +23,6 @@
   - Add attribute cues in our own Autoloops.
   - Meanwhile, use Vortex Show.
 - **Idle glow:** the Vortex 405 and the Scan 110s glow white at idle in Edit mode with nothing programmed. Their profiles are fully mapped. Next step is a DMX tester.
-- **The hazer (141) doesn't respond to DMX.** Suspects are the wireless bridge and the DIP switches. Running it manually for now.
 - **R3 204 is broken.** It's programmed and waiting for repair.
 - **WiFLY name:** the WiFLY's name won't change in SoundSwitch.
 - **Stray static looks:** "113" (twice) and "105" in Bank 4, "98" in Bank 4, and "1" in Bank 1.
