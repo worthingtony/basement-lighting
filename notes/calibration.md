@@ -34,6 +34,16 @@
 
 **Physical aim rule for the front bar:** tip DOWN = pool toward the speakers, UP = toward the ball, left/right = across the floor.
 
+- **Haze Low / Haze Med / Haze High (row 5, slots 1-3), made 2026-10-20:** only the hazer (W Haze 141). Smoke 40 / 100 / 180, Fan 255 in all three (Tony: fan always 100%, smoke varied by hand). Part of Tony's toolkit of static looks to layer over the Autoloops. The Control One also has a SMOKE button; whether it runs the fan at 100% isn't checked yet.
+
+## Toolkit on the Control One (from the quickstart guide, `manuals/soundswitch-control-one-quickstart-guide.pdf`)
+- **AUTO LOOP button** toggles the 32-pad grid between Autoloops and **Static Looks**, so the toolkit looks (841, Mirror Ball, Vortex, Haze) fire from the pads, layered over whatever Autoloop is running.
+- **SHIFT + BPM/TAP** toggles **Ableton Link**. **AUTOLOOP OVERRIDE** ignores scripted tracks and plays Autoloops only.
+- **MOVEMENT, STROBE, HUE, SMOKE** launch effects; SPEED and COLOR knobs set their speed and color.
+- **Color pads** are color overrides; **SHIFT + color pad** is a **position override** (Position 1-9). Not checked: presumably the named positions in list order (Floor Center, Front of Floor, Tiny Ball, Back of Floor, Cross, Lanes, Ball, 841 Logo, DJ Booth). If so, Position 8 (841 Logo) and 9 (DJ Booth) leave every mover except Spot 1 at grid center.
+- **WHITE / BLACK / UV** are full-white, blackout and UV (SHIFT toggles them on and off instead of momentary).
+- **Touch strip:** AUTOLOOP INTENSITY or Group 1-4 intensity.
+
 ## Named positions
 | Position | Target | Status |
 |---|---|---|
@@ -131,7 +141,7 @@ Identified 2026-10-06 from a slot-by-slot sweep Tony filmed, and matched to the 
 - Source: [Intimidator Spot 255 IRC user manual, Rev. 4](https://www.chauvetdj.com/wp-content/uploads/2016/01/Intimidator_Spot_255_IRC_UM_Rev4.pdf)
 
 ## Calibration and show looks (Static Looks, Bank 4)
-- **CAL Test (slot 1):** includes every fixture. Used to isolate one fixture at a time. Last state: the Vortex at full with Barrel Rotation 65, everything else at 0.
+- **CAL Test (slot 1):** includes every fixture. Used to isolate one fixture at a time. Last state (2026-10-20): L1 Scan 149 at full on Gobo 14 (open), the Vortex at full on Gobo 60 with Show 0 and Barrel Rotation 65, the hazer at Smoke 120 / Fan 120, plus Spot 1 (841 Logo) and the Pocket Beam on. In Perform mode, look edits are written to the project immediately.
 - **841 (row 2, slot 3):** Spot 1 only. White, full, 841 Logo position, Gobo Wheel 36 (841 logo), Gobo Rotation 10 (slow spin). Puts the spinning logo on the wall behind the bar. Switch it on over any Autoloop. Made 2026-10-06.
 - **Mirror Ball (row 2, slot 4):** the Saber (52) on the big ball and the Pocket Beam (27) on the little ball (Tiny Ball position), both white at full. Tony: "perfect". Made 2026-10-06. Tony first tried the Pocket Beam on the big ball (Ball position), then chose the little ball for this look.
 - **Vortex Show (row 1, slot 4):** includes only the Vortex. Full brightness, Barrel Rotation 65 (medium spin), Show 134 (built-in Show 4; the Vortex has 6). Tony likes it. Run it alongside the Autoloops.

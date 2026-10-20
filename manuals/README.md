@@ -10,5 +10,6 @@ Fixture manuals, kept here so a session doesn't depend on the manufacturer sites
 | `chauvet-intimidator-spot-255-irc-qrg.pdf` | F1 Spot 1, F5 Spot 14 | Quick reference guide: DMX charts | [Full Compass](https://www.fullcompass.com/common/files/32374-ChauvetIntimidatorSpot255IRCQuickReferenceGuide.pdf) |
 | `chauvet-intimidator-spot-255-irc-user-manual-rev4.pdf` | Spot 255 IRCs | User manual Rev 4 | [Chauvet DJ](https://www.chauvetdj.com/wp-content/uploads/2016/01/Intimidator_Spot_255_IRC_UM_Rev4.pdf) |
 | `antari-z-350-fazer-user-manual.pdf` | W Haze 141 | Antari Z-350 Fazer user manual (English and Chinese, 20 pages). Status LED table and control modes page 3, DMX channels and DIP-switch addressing pages 4-5 | [Antari](https://www.antari.com/usermanual/Z/Z-350/Z-350.pdf) |
+| `soundswitch-control-one-quickstart-guide.pdf` | Control One | Quickstart guide Rev 1.9 (4 pages): wiring, and the control/button guide (Shift functions, Link toggle, Static Looks mode, touch strip) | [SoundSwitch](https://cdn.inmusicbrands.com/soundswitch/files/User%20Guide%20Control%20One.pdf) |
 
 Not here yet: Intimidator Scan 360 (v2 and Rev 2), Mega Tripar Profile Plus, Mega 64 Profile Par, Inno Pocket Beam Q4, Saber Spot Go, Shocker Panel 180 USB, WiFLY Bar QA5. Add them the same way: the official PDF, a lowercase file name with the maker and model, and a row here.

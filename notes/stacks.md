@@ -145,4 +145,5 @@ Known rough edges (check with music):
 - **Intense is allowed.** The music supports very intense shows. Every fixture has to play a part.
 - **The 110s can do dramatic sweeps and blinding effects**, and so can the rest of the rig.
 - **The Shocker (W Shocker 417) doesn't seem to do any work in the Autoloops.** Find out why (is it in the loops, is its profile mapped, does Strobe/Blinder get anything from Autoscript?) and give it a real job.
+- **Haze (Tony):** fan always at 100% (ch2 = 255); Tony varies the smoke by hand. Keep haze out of the Autoloops and give him manual haze controls (static looks at a few smoke levels, all with fan 255).
 - **Use the gobos creatively across fixtures.** Both the Scan 110s and the Vortex have colored glass gobos; see `notes/gobos.md`.
