@@ -148,17 +148,36 @@ def key(combo):
         time.sleep(0.02)
 
 
+SHIFTED = {"!": "1", "@": "2", "#": "3", "$": "4", "%": "5", "^": "6", "&": "7", "*": "8", "(": "9", ")": "0",
+           "_": "-", "+": "=", "{": "[", "}": "]", "|": "\\", ":": ";", '"': "'", "<": ",", ">": ".", "?": "/",
+           "~": "`"}
+
+
 def type_text(text):
+    # Real key codes where the US layout has them: SoundSwitch's text fields ignore
+    # events that only carry a Unicode string.
     for ch in text:
         if ch == "\n":
             key("return")
-            continue
-        buf = (ctypes.c_uint16 * 1)(ord(ch))
-        for down in (True, False):
-            ev = cg.CGEventCreateKeyboardEvent(None, 0, down)
-            cg.CGEventKeyboardSetUnicodeString(ev, 1, buf)
-            post(ev)
+        elif ch == " ":
+            key("space")
+        elif ch in KEYS:
+            key(ch)
+        elif ch.lower() in KEYS and ch.isalpha():
+            key("shift+" + ch.lower())
+        elif ch in SHIFTED:
+            key("shift+" + SHIFTED[ch])
+        else:
+            type_unicode(ch)
         time.sleep(0.02)
+
+
+def type_unicode(ch):
+    buf = (ctypes.c_uint16 * 1)(ord(ch))
+    for down in (True, False):
+        ev = cg.CGEventCreateKeyboardEvent(None, 0, down)
+        cg.CGEventKeyboardSetUnicodeString(ev, 1, buf)
+        post(ev)
 
 
 def run(args):
