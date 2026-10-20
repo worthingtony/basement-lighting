@@ -94,6 +94,7 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - `notes/stacks.md` - Autoloop stacks: plans, what got built, Tony's notes
 - `notes/autoscript.md` - Autoscript for Autoloops: how it works, dialog settings, user tips
 - `notes/design-research.md` - lighting-design research and Tony's references
+- `notes/soundswitch-kb.md` - what the SoundSwitch support knowledge base says (Link, Control One, Autoloops, Static Looks, profiles), with links
 - `notes/gobos.md` - gobo colors and shapes for the Scan 110s and Vortex, and ideas for using them
 - `notes/handoff-fixture-profiles.md` - handoff for the custom Scan 110 and Vortex profiles (Claude Code on the MacBook)
 - `manuals/` - fixture manuals (PDF), indexed in `manuals/README.md`
