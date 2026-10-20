@@ -28,6 +28,7 @@ The rebuild started 2026-10-05. It works in this order:
 | `notes/soundswitch-guide.md` | How SoundSwitch 2.11 actually works, plus the gotchas |
 | `notes/fixes-and-issues.md` | Fixes made so far and open problems |
 | `notes/session-log.md` | What happened, session by session |
+| `manuals/` | Fixture manuals (PDF), indexed in `manuals/README.md` |
 | `model/basement-rig-map.html` | Interactive 3D model of the room and fixtures. Open it in a browser. It loads Three.js from a CDN. |
 
 ## Conventions

@@ -58,13 +58,13 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - None of it has been seen on the lights. Run Bank 3 with music, BPM on and haze.
 - Claude-0000 is unchanged (round 1 only). Claude.ssproj is the 2026-10-06 22:10 fallback.
 
-- **Claude Code on the MacBook - start here (2026-10-20):** build the custom Scan 110 profile (going dark + gobos mapped to colors), in code where possible. Everything you need is in `notes/handoff-scan110-profile.md`. Ask Tony before Update Fixtures.
+- **Claude Code on the MacBook - start here (2026-10-20):** build two custom profiles, in code where possible, and apply both in one Update Fixtures pass: the Scan 110s (going dark + gobos mapped to colors) and the Vortex (Black and idle glow, colors from its gobo wheel). Everything you need is in `notes/handoff-fixture-profiles.md`; the manuals are in `manuals/`. Ask Tony before Update Fixtures.
 
-0. **Tony's note:** pressing Black leaves the Vortex running when Vortex Show is on. See `notes/fixes-and-issues.md`.
+0. **Tony's note:** pressing Black leaves the Vortex running when Vortex Show is on. See `notes/fixes-and-issues.md`; the test plan is Job V1 in `notes/handoff-fixture-profiles.md`.
 1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed).
 2. **DJ booth:** now set up at the front of the dance floor, on the **left as seen from the back** (Tony's "stage right": his right when standing behind the front bar facing the room). Spot 1 can't aim at the booth (tried 2026-10-06). Tony will check whether he has a second 841 gobo; if so, it needs a fixture that can reach the booth (Spot 14 is worth testing first). An unused "DJ Booth" position and an empty look "99" (Bank 4, row 3 slot 1) are left over from the attempt and aren't saved yet.
 3. Check L3 171 alone at Back of Floor and Cross.
-4. Map the Vortex's color channels in Fixture Manager, so Autoloops can color it. Try more Show program values.
+4. Map the Vortex's colors in Fixture Manager, so Autoloops can color it. Its gobo wheel (ch3) is its color wheel: Job V2 in `notes/handoff-fixture-profiles.md`. Try more Show programs: there are only 6, at Show values 31, 62, 93, 124, 155, 186 (the current 134 is Show 4) and 228 for random.
 5. Add position cues to the Bank 2-4 Autoloops, or build the custom "Groove" Autoloop:
    - Tripars on a slow color wash
    - Movers easing between Floor Center and Front of Floor
@@ -82,7 +82,7 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
    - Re-add one Pocket Roll.
    - Consider another LED pinspot (or a pinhole gobo) for the big ball.
    - Measure where the tiny ball and the Fog Fury are, and add them to the 3D model.
-   - Track down the idle glow on the Vortex and the Scan 110s.
+   - Track down the idle glow on the Vortex and the Scan 110s. The Vortex's own display (Information > DMXValue) shows what it receives, so it can stand in for a DMX tester.
 8. Back up `Claude.ssproj` and the custom Fixture Manager profile ("Intimidator Scan 360 Rev 2 tony") into this repo.
 
 ## Files
@@ -94,5 +94,6 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - `notes/stacks.md` - Autoloop stacks: plans, what got built, Tony's notes
 - `notes/autoscript.md` - Autoscript for Autoloops: how it works, dialog settings, user tips
 - `notes/design-research.md` - lighting-design research and Tony's references
-- `notes/handoff-scan110-profile.md` - handoff for the custom Scan 110 profile (Claude Code on the MacBook)
+- `notes/handoff-fixture-profiles.md` - handoff for the custom Scan 110 and Vortex profiles (Claude Code on the MacBook)
+- `manuals/` - fixture manuals (PDF), indexed in `manuals/README.md`
 - `model/basement-rig-map.html` - 3D model (Three.js). Fixture data is in the `FX` array, in inches.
