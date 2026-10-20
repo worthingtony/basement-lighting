@@ -58,6 +58,8 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - None of it has been seen on the lights. Run Bank 3 with music, BPM on and haze.
 - Claude-0000 is unchanged (round 1 only). Claude.ssproj is the 2026-10-06 22:10 fallback.
 
+- **Claude Code on the MacBook - start here (2026-10-20):** build the custom Scan 110 profile (going dark + gobos mapped to colors), in code where possible. Everything you need is in `notes/handoff-scan110-profile.md`. Ask Tony before Update Fixtures.
+
 0. **Tony's note:** pressing Black leaves the Vortex running when Vortex Show is on. See `notes/fixes-and-issues.md`.
 1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed).
 2. **DJ booth:** now set up at the front of the dance floor, on the **left as seen from the back** (Tony's "stage right": his right when standing behind the front bar facing the room). Spot 1 can't aim at the booth (tried 2026-10-06). Tony will check whether he has a second 841 gobo; if so, it needs a fixture that can reach the booth (Spot 14 is worth testing first). An unused "DJ Booth" position and an empty look "99" (Bank 4, row 3 slot 1) are left over from the attempt and aren't saved yet.
@@ -92,4 +94,5 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - `notes/stacks.md` - Autoloop stacks: plans, what got built, Tony's notes
 - `notes/autoscript.md` - Autoscript for Autoloops: how it works, dialog settings, user tips
 - `notes/design-research.md` - lighting-design research and Tony's references
+- `notes/handoff-scan110-profile.md` - handoff for the custom Scan 110 profile (Claude Code on the MacBook)
 - `model/basement-rig-map.html` - 3D model (Three.js). Fixture data is in the `FX` array, in inches.

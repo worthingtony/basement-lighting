@@ -59,3 +59,7 @@
 - **~21:25** Autoscript research in `notes/autoscript.md` (web plus the dialog itself).
 - **~21:30** SoundSwitch froze while scrolling the Autoscript preset dropdown. Force-quit through Activity Monitor (Tony's computer-use approval covered it) and reopened. Nothing saved was lost.
 - **21:40-22:25** Round 2 EDM stack built in **Bank 3 slots 1-8** with Autoscript plus hand edits, applying Tony's notes (`stacks.md`, "Round 2"). New attribute cues: Prism Spots + 360s, 841 Logo Gobo, Spots Clean. "R2 7 841 Breakdown" has the pulsing 841 logo on Spot 1. Saved after every loop. Confirmed the 80s looks really are in Bank 1 slots 9-13. **Nothing checked on the lights.**
+
+## 2026-10-20
+- **07:03** Tony shared a Facebook thread: the Intimidator Spot 110 has no open/closed shutter, so it stays on unless the dimmer goes to 0. Same family as our Scan 110s and their idle glow. He also wants the Scan 110 gobos mapped to colors (the 110 is white only).
+- **07:41** Tony isn't at the MacBook and wants this done in Claude Code there. Handoff written: `notes/handoff-scan110-profile.md` (DMX chart, the going-dark fix, a proposed gobo-to-color table, doing it in code, Update Fixtures steps). Update Fixtures is not yet approved for this job.
