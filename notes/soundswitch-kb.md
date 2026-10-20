@@ -30,7 +30,7 @@ Read on 2026-10-20 from support.soundswitch.com: all 10 folders (131 articles) w
 - **Color pads:**
   - Color overrides; Shift + pad = Position 1-9. The KB doesn't say how positions map. (inferred: library order; press them to check.)
   - Pad LED colors: in the MIDI screen, right-click a button > MIDI Output Color. [c1faq]
-- **WHITE / BLACK / UV:** full white, blackout and UV. Shift latches them. [c1pdf]
+- **WHITE / BLACK / UV:** full white, blackout and UV. The guide says Shift toggles them, but on Tony's unit a plain press of BLACK is already a toggle (2026-10-20). The printed HOLD labels are presumably the Shift (momentary) versions. [c1pdf]
 - **Touch strip:** Autoloop or scripted intensity, or Group 1-4 intensity. [c1pdf]
 - **Two DMX universes.** Address a fixture as `2:100`, or pick the universe in the DMX chart. [univ]
 - **USB 1/2 switch:** two hosts at once. It always needs a computer running SoundSwitch 2.5+. [c1faq] [omni]

@@ -42,7 +42,7 @@
 - **SHIFT + BPM/TAP** toggles **Ableton Link**. **AUTOLOOP OVERRIDE** ignores scripted tracks and plays Autoloops only.
 - **MOVEMENT, STROBE, HUE, SMOKE** launch effects; SPEED and COLOR knobs set their speed and color.
 - **Color pads** are color overrides; **SHIFT + color pad** is a **position override** (Position 1-9). Not checked: presumably the named positions in list order (Floor Center, Front of Floor, Tiny Ball, Back of Floor, Cross, Lanes, Ball, 841 Logo, DJ Booth). If so, Position 8 (841 Logo) and 9 (DJ Booth) leave every mover except Spot 1 at grid center.
-- **WHITE / BLACK / UV** are full-white, blackout and UV (SHIFT toggles them on and off instead of momentary).
+- **WHITE / BLACK / UV** are full-white, blackout and UV. **BLACK is a toggle** on Tony's unit (press once for black, again to release; Tony, 2026-10-20). The printed WHITE/BLACK/UV HOLD labels are presumably the SHIFT versions (momentary hold), not yet checked.
 - **Touch strip:** AUTOLOOP INTENSITY or Group 1-4 intensity.
 
 ## Named positions
