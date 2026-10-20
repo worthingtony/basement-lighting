@@ -142,6 +142,7 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 
 ## Gotchas
 - **Colors:** a Static Look's color defaults to 0,0,0, which is dark. **Always set white.**
+- **RGBW / RGBAW fixtures:** the color picker has separate **A, W and UV** sliders beside the RGB fields. A plain white (#ffffff) only drives R, G and B; on a quad-LED beam like the Pocket Beam that shows as three colored spots. For a true single white beam, set R/G/B to 0 and W to 255. In the picker, move between fields with Tab and finish with Apply: Return closes the picker.
 - **Sliders:** a Static Look slider must be moved before a 0 actually sends. Push it up, then back down.
 - **Black** on the Control One overrides everything.
 - **Mirror scanners:** pan and tilt map to unexpected room axes, so check each model. The R side of a mirrored-mount pair needs pan invert.
