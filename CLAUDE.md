@@ -58,7 +58,7 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - None of it has been seen on the lights. Run Bank 3 with music, BPM on and haze.
 - Claude-0000 is unchanged (round 1 only). Claude.ssproj is the 2026-10-06 22:10 fallback.
 
-- **Claude Code on the MacBook - start here (2026-10-20):** build two custom profiles, in code where possible, and apply both in one Update Fixtures pass: the Scan 110s (going dark + gobos mapped to colors) and the Vortex (Black and idle glow, colors from its gobo wheel). Everything you need is in `notes/handoff-fixture-profiles.md`; the manuals are in `manuals/`. Ask Tony before Update Fixtures.
+- **Claude Code on the MacBook - start here (2026-10-20):** build two custom profiles in Fixture Manager (computer use, like before), and apply both in one Update Fixtures pass: the Scan 110s (going dark + gobos mapped to colors) and the Vortex (Black and idle glow, colors from its gobo wheel). Everything you need is in `notes/handoff-fixture-profiles.md`; the manuals are in `manuals/`. Ask Tony before Update Fixtures.
 
 0. **Tony's note:** pressing Black leaves the Vortex running when Vortex Show is on. See `notes/fixes-and-issues.md`; the test plan is Job V1 in `notes/handoff-fixture-profiles.md`.
 1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed).

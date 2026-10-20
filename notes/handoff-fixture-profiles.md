@@ -4,8 +4,10 @@ Written 2026-10-20 from a Claude chat session that had no access to the Mac's fi
 
 Manuals for both fixtures are in `manuals/` (index: `manuals/README.md`).
 
+**How to work (Tony, 2026-10-20 afternoon): use Fixture Manager like before.** Drive SoundSwitch and Fixture Manager with computer use from the Claude desktop app on the MacBook, as the earlier sessions did. The how-to is `notes/soundswitch-guide.md`.
+
 ## Goal
-Build two custom profiles in one Fixture Manager session, then apply both with **one** Update Fixtures pass. Do it **in code where possible**: a script in this repo that writes or patches the profile files, so the change is repeatable and version-controlled. Fall back to clicking through Fixture Manager only if the file format turns out to be impractical.
+Build two custom profiles in one Fixture Manager session, then apply both with **one** Update Fixtures pass. A script that writes the profile files is optional: worth adding only if the files turn out to be plain text, so the change can be repeated.
 
 1. **"Intimidator Scan 110 Claude"** (11ch), for the six I-beam scanners:
    - **Make them go fully dark.** They glow white at idle, and Black / zero intensity doesn't reliably kill them.
@@ -155,11 +157,11 @@ ch5 128-159 is a built-in "pulse effect in sequences", another candidate for the
 
 ---
 
-# Doing it in code (both profiles)
-1. **Find the files.** Nothing about the on-disk format has been verified. Likely places: `~/Music/SoundSwitch` (exists, contents unseen), `~/Library/Application Support/...`, and the project itself (`/Users/tonyw/Dropbox/SoundSwitch/Claude-2100.ssproj`, the newest). Look for the Fixture Manager workspace and the existing custom profiles ("Intimidator Scan 360 Claude", "Intimidator Scan 360 Rev 2 tony") to learn the format.
+# Steps (both profiles)
+1. **Find the files** (for the backup, and to see whether a script is practical). Nothing about the on-disk format has been verified. Likely places: `~/Music/SoundSwitch` (exists, contents unseen), `~/Library/Application Support/...`, and the project itself (`/Users/tonyw/Dropbox/SoundSwitch/Claude-2100.ssproj`, the newest). Look for the Fixture Manager workspace and the existing custom profiles ("Intimidator Scan 360 Claude", "Intimidator Scan 360 Rev 2 tony") to learn the format.
 2. **Back up first** into this repo. That's also item 8 in `CLAUDE.md` "Next up": back up the .ssproj and the custom profiles.
-3. **Write a script** in this repo (for example `tools/fixture_profiles.py`) that builds each custom profile from its stock profile plus the changes above, with the mapping tables as data. Never edit the stock library profile in place.
-4. **Load them.** Open Fixture Manager to confirm it reads both profiles cleanly, then File > Save Workspace.
+3. **Build both profiles in Fixture Manager.** Rename a copy of each stock profile (keep the stock ID, as the Scan 360 Claude profile did), make the changes above, then File > Save Workspace. Never edit the stock library profile in place. Optional: if the files are plain text, a script in this repo (for example `tools/fixture_profiles.py`) that reproduces them, with the mapping tables as data.
+4. **Check them.** Reopen each profile in Fixture Manager and confirm every channel and range.
 5. **With Tony's OK:** in SoundSwitch, File > Save Project (as a new dated copy, for example Claude-<date>.ssproj, so Claude-2100 stays intact), then Options > Update Fixtures. Update Fixtures can crash SoundSwitch to its home screen, and it **resets the names and groups** of the updated fixtures. Restore them from the two fixture tables above in the DMX patch, then save.
 6. **Check the existing Vortex looks** still hold their values after the update: CAL Test, Vortex Show, Vortex Slow / Medium / Fast (Show, Show Speed, Barrel Rotation).
 7. Test Jobs 1, 2, V1 and V2 as above. Update `notes/fixes-and-issues.md`, `notes/rig.md` (profile names), `notes/calibration.md`, `notes/session-log.md` and `CLAUDE.md`, then commit.
