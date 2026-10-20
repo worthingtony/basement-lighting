@@ -1,6 +1,7 @@
 # Fixes and open issues
 
 ## Fixes made
+- **Scan 110s and Vortex can take color from the Autoloops (2026-10-20).** Custom profiles "Intimidator Scan 110 Claude" and "Vortex Claude" map their colored gobo wheels as color wheels (`notes/gobos.md`), applied with Update Fixtures on Claude-1020. The 110 strobe range is capped at 131.
 - **Shocker glowed at idle.** Its 5ch profile left ch 4-5 unmapped, which fired Auto Program. Fixed by moving it from 136 to 417 in 8ch Mode 3 (the unit was re-addressed).
 - **F4 Scan360 315 did a slow strobe.** The profile's strobe range had R start 8. Changed it to 4 in Fixture Manager, since 4-7 = open. Then File > Save Workspace, then Options > Update Fixtures.
 - **F4 lost its name and group** after that profile update. It was renamed "F4 Scan360 315" and set back to Mover Primary Group 2.
@@ -12,8 +13,7 @@
 - **Vortex was stuck on one look.** The "Vortex Show" static look runs its built-in program instead.
 
 ## Open issues
-- **Claude desktop 3.1623.0 breaks computer use on SoundSwitch and Fixture Manager (2026-10-20).** Clicks fail with "Could not verify which document this window is editing"; the windows return kAXErrorNoValue for AXDocument. Screenshots still work. Workarounds: roll back to Claude 2.42304.2 (and don't quit Claude, or the updater reinstalls 3.x), or Tony clicks with Claude directing. A click helper using CoreGraphics events is in `tools/ui.py`, but auto mode blocks it unless Tony adds an allow rule.
-- **Scan 110 Claude wheel is mapped by hue, but the gobos are real colors.** Re-map it before Update Fixtures (see `session-log.md`, 2026-10-20).
+- **Claude desktop 3.1623.0 breaks computer use on SoundSwitch and Fixture Manager (2026-10-20).** Clicks fail with "Could not verify which document this window is editing"; the windows return kAXErrorNoValue for AXDocument. Screenshots still work. Workarounds: roll back to Claude 2.42304.2 (and don't quit Claude, or the updater reinstalls 3.x), or Tony clicks with Claude directing. Workaround in use: `tools/ui.py` (CoreGraphics clicks and keys, guarded to SoundSwitch and Fixture Manager), allowed by a project-local permission rule. Release Claude's full-screen control while using it, or a floating Claude window takes the clicks. Auto mode still stops risky steps such as Update Fixtures; Tony confirms those.
 - **Fixture Manager workspace has a stray "Intimidator Scan 110 (Colors)" copy** (GUID 7D4DA6E3, unused by the patch). Harmless; delete when convenient.
 - **Black doesn't stop the Vortex (2026-10-06 demo).** With Vortex Show on, pressing Black on the Control One leaves the Vortex running. Likely cause: Vortex Show runs the fixture's built-in program (ch 7, Show 134), which seems to ignore the dimmer that Black pulls to 0. Ideas: once the Vortex has a color wheel in its profile, drive it from the Autoloops and Static Looks instead of its built-in show; or test whether Black also zeroes the shutter channel. The manual shows ch5 Shutter has a real closed range (0-31). Test plan: Job V1 in `notes/handoff-fixture-profiles.md`.
 - **SoundSwitch froze after a save (2026-10-06 21:08)** with the Edit-mode File menu drawn open. Force Quit and relaunch fixed it, and nothing saved was lost.

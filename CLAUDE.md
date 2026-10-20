@@ -47,7 +47,7 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - **Static Look "Vortex Show"** (Bank 4) runs the Vortex's built-in program (Show 134) with a medium barrel spin. Switch it on alongside the Autoloops. The Autoloops can't change the Vortex by themselves.
 - **Static Looks "Vortex Slow / Medium / Fast"** (Bank 4, row 4) are the same show at three Show Speeds and barrel speeds. **"841 Fade"** (row 3, slot 2) is the logo with 2 s fades. Details: `notes/calibration.md`.
 - **Mac setup:**
-  - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude.ssproj`. Always use the **disk venue**. The USB venue is the Control One copy.
+  - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude-1020.ssproj` (newest). Always use the **disk venue**. The USB venue is the Control One copy.
   - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Claude watches its Live View in the Claude app's built-in browser (account.ring.com, signed in) and restarts it when it times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
@@ -58,7 +58,7 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - None of it has been seen on the lights. Run Bank 3 with music, BPM on and haze.
 - Claude-0000 is unchanged (round 1 only). Claude.ssproj is the 2026-10-06 22:10 fallback.
 
-- **Start here (2026-10-20 evening):** both custom profiles are built in Fixture Manager ("Intimidator Scan 110 Claude", "Vortex Claude"), but **not applied**. Next: confirm the Scan 110 and Vortex gobo colors (G1 done), re-map the 110 wheel to the real gobo colors, then Update Fixtures (Tony approved it on 10-20, after the re-map) and restore names and groups. Details: `notes/session-log.md` 2026-10-20 and `notes/handoff-fixture-profiles.md`. **Computer use is broken in Claude 3.1623.0** (see `notes/fixes-and-issues.md`).
+- **Start here (after 2026-10-20):** the working project is now **`/Users/tonyw/Dropbox/SoundSwitch/Claude-1020.ssproj`** (Claude-2100 plus the new profiles). Update Fixtures is done there: the Scan 110s and the Vortex get their color from their colored gobos (`notes/gobos.md`), and names, types and groups are restored. Next: check that the existing Autoloops and the Vortex looks survived the update, then **have the long design conversation with Tony before any programming** (`notes/stacks.md`, 2026-10-20). Clicking goes through `tools/ui.py` while Claude 3.1623.0's click tool is broken (`notes/fixes-and-issues.md`).
 
 0. **Tony's note:** pressing Black leaves the Vortex running when Vortex Show is on. See `notes/fixes-and-issues.md`; the test plan is Job V1 in `notes/handoff-fixture-profiles.md`.
 1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed).
@@ -94,6 +94,7 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - `notes/stacks.md` - Autoloop stacks: plans, what got built, Tony's notes
 - `notes/autoscript.md` - Autoscript for Autoloops: how it works, dialog settings, user tips
 - `notes/design-research.md` - lighting-design research and Tony's references
+- `notes/gobos.md` - gobo colors and shapes for the Scan 110s and Vortex, and ideas for using them
 - `notes/handoff-fixture-profiles.md` - handoff for the custom Scan 110 and Vortex profiles (Claude Code on the MacBook)
 - `manuals/` - fixture manuals (PDF), indexed in `manuals/README.md`
 - `model/basement-rig-map.html` - 3D model (Three.js). Fixture data is in the `FX` array, in inches.
