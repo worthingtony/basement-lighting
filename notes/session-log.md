@@ -83,3 +83,11 @@
 - Gotchas found: **the Positions window drives the hazer to full while it's open** (unplug the hazer's DMX while editing positions); the Positions window sometimes opens invisible (press Escape and reopen it after a pause); Apply closes it.
 - **18:44** Tony aimed the Pocket Beam on Ball, audited every position, and saved a few updates (venue file written 18:44). Note from Tony: positions can be looks, not one shared target.
 - **~19:05** Virtual DJ to SoundSwitch (OS2L) connected after fixing the source and the macOS Local Network permission. A paused / tempo-less Autoloop holds its last frame lit; BLACK on the Control One is a toggle.
+
+## 2026-10-21
+- **Overnight: no work was done.** Claude ended its turn at 21:57 on 10-20 instead of continuing, so no loops were built and no report was written.
+- **Slip:** a `tools/ui.py` batch meant for Fixture Manager went to SoundSwitch (the guard only checks that one of the two apps is in front). Cmd-A plus the words "Chauvet" and "Shocker" landed on R2 6 Spiral Peak and opened a color picker, which was cancelled. SoundSwitch saved `SSAutoLoop18.ssfile` when Tony closed it at 05:28, so that loop may hold stray edits; the 21:54 version is in Dropbox's version history.
+- **Shocker root cause found:** SoundSwitch's stock profile, read from `SoundSwitchVenues.bin`, leaves the four zone channels (ch1-4) unmapped in 8-CH Mode 3, so they sit at 0 ("no function") and the panel can never light. Tony had seen it fail in his Autoscripted track too. Fix options in `fixes-and-issues.md`; the guide is now in `manuals/`.
+- The venue file stores every patched profile as plain UTF-16 text plus little-endian numbers (attribute type, channel count, start and end channel), so profiles can be checked without the Fixture Manager UI.
+- Design conversation started: loops hold one energy level; Tony fires the big moments; banks by energy with genres apart; every light gets a job. Tony: Autoscript should handle the strobe, and there is a software strobe switch plus the STROBE button.
+
