@@ -19,7 +19,7 @@ Listed from the front (speakers) toward the back.
 
 | SoundSwitch name | Addr | Ch | Model | X | Y | Z | Mount / aim |
 |---|---|---|---|---|---|---|---|
-| W Shocker 417 | 417-424 | 8 (Mode 3) | Shocker Panel 180 USB | 93.5 | 376 | 48 | Under the center speaker, facing the room |
+| W Shocker 417 | 417-424 | 8 (Mode 3) | Shocker Panel 180 USB, custom profile "Shocker Panel 180 USB Claude" (zones mapped, 2026-10-21) | 93.5 | 376 | 48 | Under the center speaker, facing the room |
 | W Haze 141 | 141-142 | 2 | Z-350 hazer | ~80 | ~370 | 12 | Floor next to the sub. Wireless DMX bridge. |
 | F3 Mega64 126 | 126-134 | 9 | Mega 64 Profile Par | 94 | 369 | ~74 | Front bar, washing the speaker wall |
 | F1 Spot 1 | 1-13 | 13 | Intimidator Spot 255 IRC | 60 | 362 | 69 | Front bar, hung upside down |

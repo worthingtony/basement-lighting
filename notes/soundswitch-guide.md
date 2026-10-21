@@ -49,6 +49,9 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Rename or re-address:** double-click a fixture's name in the right list. That opens a dialog with Name and DMX Address.
 - The right list only scrolls with the mouse over its lower part. Its last rows can hide behind the Fixture Library, so scroll down hard. The Fixture Library divider can be dragged.
 - **Done** closes the patch.
+- **Delete key** removes the selected fixture straight away, with no confirmation, and for a multi-cell fixture all its cells. Check which row has the white outline first.
+- **Patching at an address:** drag a mode row from the Fixture Library onto the grid cell (for example 417). Add Fixture puts it at the first free address instead.
+- **Multi-cell fixtures** are stored as one record per cell: the fixture's own name, then "<model> - 2", "- 3" ... and "MASTER - <model> - N". After a rename the list label may not refresh; the rename dialog shows the stored name.
 - **After Update Fixtures** (2026-10-21): names reset to the profile name and the type can change (the 110s and the Vortex came back as Mover (Primary)). Type dropdowns open with the current value over the control, so the next item down is about 12 px lower. A multi-cell fixture is typed "Multi Cell (Primary)".
 - **Menus from Claude:** the computer-use menu tool can press SoundSwitch menu items (File > Save Project, File > Switch Mode), but not Fixture Manager's (AXDocument error). Its File menu has Export to Control One and Import from Control One right under Save Project, so never click it blind.
 - **Performance mode White and UV are momentary buttons** (hold them); Black Out, Strobe, Movement, HUE and Smoke are toggles.
