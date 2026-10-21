@@ -1,6 +1,7 @@
 # Fixes and open issues
 
 ## Fixes made
+- **Virtual DJ wasn't connecting to SoundSwitch (2026-10-20).** SoundSwitch was on BPM Detection as its source; switched to Virtual DJ, it showed "Not connected": SoundSwitch was advertising and listening (OS2L over Bonjour, TCP port picked at launch, e.g. 62885) but Virtual DJ 8.5 never connected. Firewall off. After Tony checked VDJ's OS2L option and macOS **Local Network** permission for both apps, VDJ connected (TCP established to the OS2L port). VDJ's settings.xml still says `os2l = auto`, so the permission or a restart was most likely the fix (not confirmed). Virtual DJ also has Ableton Link open (UDP 20808).
 - **Hazer W Haze 141 now runs on DMX (2026-10-20).** A DIP switch was set wrong. For 141 the Antari Z-350 needs DIP **1, 3, 4, 8 ON** (1+4+8+128), the rest OFF. Fan slowing when the wireless dongle is plugged in = DMX has taken over; LED solid amber = DMX mode, flashing amber = making haze. ch1 haze 5-255 = 1-100%, ch2 fan 5-255 = 21-100%. Warm-up about 4.5 min. Manual: `manuals/antari-z-350-fazer-user-manual.pdf`.
 - **Scan 110s and Vortex can take color from the Autoloops (2026-10-20).** Custom profiles "Intimidator Scan 110 Claude" and "Vortex Claude" map their colored gobo wheels as color wheels (`notes/gobos.md`), applied with Update Fixtures on Claude-1020. The 110 strobe range is capped at 131.
 - **Shocker glowed at idle.** Its 5ch profile left ch 4-5 unmapped, which fired Auto Program. Fixed by moving it from 136 to 417 in 8ch Mode 3 (the unit was re-addressed).
