@@ -16,6 +16,7 @@ click landed on SoundSwitch's window behind it (2026-10-20).
   ui.py front
   ui.py click X Y [--double] [--right]
   ui.py move X Y
+  ui.py hold X Y SECONDS         (press, wait, release: momentary buttons)
   ui.py drag X1 Y1 X2 Y2
   ui.py scroll X Y DY            (DY lines; positive scrolls down)
   ui.py type TEXT
@@ -205,6 +206,13 @@ def run(args):
         click(args[1], args[2], double="--double" in args, right="--right" in args)
     elif cmd == "move":
         mouse(5, pt(args[1], args[2]))
+    elif cmd == "hold":
+        p = pt(args[1], args[2])
+        mouse(5, p)
+        time.sleep(0.05)
+        mouse(1, p)
+        time.sleep(float(args[3]))
+        mouse(2, p)
     elif cmd == "drag":
         drag(*args[1:5])
     elif cmd == "scroll":

@@ -49,6 +49,9 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Rename or re-address:** double-click a fixture's name in the right list. That opens a dialog with Name and DMX Address.
 - The right list only scrolls with the mouse over its lower part. Its last rows can hide behind the Fixture Library, so scroll down hard. The Fixture Library divider can be dragged.
 - **Done** closes the patch.
+- **After Update Fixtures** (2026-10-21): names reset to the profile name and the type can change (the 110s and the Vortex came back as Mover (Primary)). Type dropdowns open with the current value over the control, so the next item down is about 12 px lower. A multi-cell fixture is typed "Multi Cell (Primary)".
+- **Menus from Claude:** the computer-use menu tool can press SoundSwitch menu items (File > Save Project, File > Switch Mode), but not Fixture Manager's (AXDocument error). Its File menu has Export to Control One and Import from Control One right under Save Project, so never click it blind.
+- **Performance mode White and UV are momentary buttons** (hold them); Black Out, Strobe, Movement, HUE and Smoke are toggles.
 
 ## Fixture Manager (separate app)
 - Profiles have attribute, channel and range, but **no default values**.
