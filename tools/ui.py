@@ -8,8 +8,11 @@ Screenshots still come from the computer-use tool; this script only sends input.
 
 Coordinates are in the computer-use screenshot frame (1372 wide by default) and
 are scaled to screen points. Every action first checks that the frontmost app is
-SoundSwitch or FixtureManager, and refuses otherwise.
+SoundSwitch or FixtureManager, and refuses otherwise. With --app, it must be that
+one app: a batch meant for Fixture Manager once typed into SoundSwitch because a
+click landed on SoundSwitch's window behind it (2026-10-20).
 
+  ui.py [--app APP] COMMAND ...
   ui.py front
   ui.py click X Y [--double] [--right]
   ui.py move X Y
@@ -28,6 +31,7 @@ import time
 
 ALLOWED = {"SoundSwitch", "FixtureManager"}
 FRAME_W = 1372.0
+only_app = None  # set by --app
 
 cg = ctypes.cdll.LoadLibrary("/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics")
 
@@ -84,6 +88,8 @@ def guard():
     app = frontmost()
     if app not in ALLOWED:
         sys.exit(f"REFUSED: frontmost app is {app!r}, not SoundSwitch or FixtureManager")
+    if only_app and app != only_app:
+        sys.exit(f"REFUSED: frontmost app is {app!r}, not {only_app!r}")
 
 
 def pt(x, y):
@@ -212,17 +218,23 @@ def run(args):
 
 
 def main():
-    if len(sys.argv) < 2:
+    global only_app
+    argv = sys.argv[1:]
+    if argv[:1] == ["--app"]:
+        if len(argv) < 2 or argv[1] not in ALLOWED:
+            sys.exit("--app needs SoundSwitch or FixtureManager")
+        only_app, argv = argv[1], argv[2:]
+    if not argv:
         sys.exit(__doc__)
-    if sys.argv[1] == "batch":
-        for line in open(sys.argv[2]):
+    if argv[0] == "batch":
+        for line in open(argv[1]):
             line = line.strip()
             if line and not line.startswith("#"):
                 print(">", line, flush=True)
                 run(shlex.split(line))
                 time.sleep(0.25)
     else:
-        run(sys.argv[1:])
+        run(argv)
 
 
 if __name__ == "__main__":
