@@ -58,6 +58,10 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Wheel slots:** the Name fills itself in from the hex code. "+" only adds a slot when there's free range after the last slot's end, so shorten the last range first.
 - **Attribute and wheel cells:** double-click to edit; Cmd-A, type, Return.
 - The workspace (`~/Library/Application Support/inMusicBrands/FixtureLibrary/Workspace.db`) and .plfix exports are encrypted, so profiles can't be written by a script.
+- **Profiles can be read by a script, though (2026-10-21):**
+  - **The library cache** is plain SQLite: `FixtureLibrary/cloud.soundswitch.net/Schema2/sscloud.db` (about 10,800 profiles) and `fixtures.soundswitch.net/Schema2/sscloud.db`. Copy the file first, then query it read-only. Tables: `fixture` (name, guid), `manufacturer`, `modes` (name, channel count), `attr` (type, name, coarse/fine channel, 0-based). Attribute types seen: 1 Intensity, 41 Strobe, 64 Shutter, 82 Auto Program, 83 program speed. The full profile (cells, strobe values, wheels) is in `fixture.data`, which is encrypted.
+  - **Patched profiles** are also stored in the project's `SoundSwitchVenues.bin` as UTF-16 text plus little-endian numbers, so the exact profile a fixture uses can be checked there.
+  - A fixture's GUID is in both places, so the two can be matched (the Shocker's stock profile is `{9E25F307-...}`).
 - After editing a profile:
   1. File > Save Workspace in Fixture Manager.
   2. Options > Update Fixtures in SoundSwitch. **Save the project first**, because this can crash to the home screen, and it can also reset fixture names and groups.
