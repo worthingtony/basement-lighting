@@ -49,9 +49,25 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Rename or re-address:** double-click a fixture's name in the right list. That opens a dialog with Name and DMX Address.
 - The right list only scrolls with the mouse over its lower part. Its last rows can hide behind the Fixture Library, so scroll down hard. The Fixture Library divider can be dragged.
 - **Done** closes the patch.
+- **Delete key** removes the selected fixture straight away, with no confirmation, and for a multi-cell fixture all its cells. Check which row has the white outline first.
+- **Patching at an address:** drag a mode row from the Fixture Library onto the grid cell (for example 417). Add Fixture puts it at the first free address instead.
+- **Multi-cell fixtures** are stored as one record per cell: the fixture's own name, then "<model> - 2", "- 3" ... and "MASTER - <model> - N". After a rename the list label may not refresh; the rename dialog shows the stored name.
+- **After Update Fixtures** (2026-10-21): names reset to the profile name and the type can change (the 110s and the Vortex came back as Mover (Primary)). Type dropdowns open with the current value over the control, so the next item down is about 12 px lower. A multi-cell fixture is typed "Multi Cell (Primary)".
+- **Menus from Claude:** the computer-use menu tool can press SoundSwitch menu items (File > Save Project, File > Switch Mode), but not Fixture Manager's (AXDocument error). Its File menu has Export to Control One and Import from Control One right under Save Project, so never click it blind.
+- **Performance mode White and UV are momentary buttons** (hold them); Black Out, Strobe, Movement, HUE and Smoke are toggles.
 
 ## Fixture Manager (separate app)
 - Profiles have attribute, channel and range, but **no default values**.
+- **Shortcuts:** Cmd-S is **Save Fixture As** (exports a .plfix); **Shift-Cmd-S is Save Workspace**.
+- **Copy a library profile into the workspace by dragging** its row from the Fixture Library onto the Workspace list (a click or double-click does nothing). Search the manufacturer first: the Vortex is under **Eliminator Lighting**, model "Vortex".
+- **Rename** a workspace copy in its Model field; the GUID stays the stock one, so Update Fixtures applies it to fixtures already patched with the stock profile.
+- **Wheel slots:** the Name fills itself in from the hex code. "+" only adds a slot when there's free range after the last slot's end, so shorten the last range first.
+- **Attribute and wheel cells:** double-click to edit; Cmd-A, type, Return.
+- The workspace (`~/Library/Application Support/inMusicBrands/FixtureLibrary/Workspace.db`) and .plfix exports are encrypted, so profiles can't be written by a script.
+- **Profiles can be read by a script, though (2026-10-21):**
+  - **The library cache** is plain SQLite: `FixtureLibrary/cloud.soundswitch.net/Schema2/sscloud.db` (about 10,800 profiles) and `fixtures.soundswitch.net/Schema2/sscloud.db`. Copy the file first, then query it read-only. Tables: `fixture` (name, guid), `manufacturer`, `modes` (name, channel count), `attr` (type, name, coarse/fine channel, 0-based). Attribute types seen: 1 Intensity, 41 Strobe, 64 Shutter, 82 Auto Program, 83 program speed. The full profile (cells, strobe values, wheels) is in `fixture.data`, which is encrypted.
+  - **Patched profiles** are also stored in the project's `SoundSwitchVenues.bin` as UTF-16 text plus little-endian numbers, so the exact profile a fixture uses can be checked there.
+  - A fixture's GUID is in both places, so the two can be matched (the Shocker's stock profile is `{9E25F307-...}`).
 - After editing a profile:
   1. File > Save Workspace in Fixture Manager.
   2. Options > Update Fixtures in SoundSwitch. **Save the project first**, because this can crash to the home screen, and it can also reset fixture names and groups.
@@ -73,10 +89,13 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
   - The fixture list has the P/T invert toggles. The Position list has **+** to add a position, and you double-click a position to rename it. A new position starts with every fixture at the grid center.
   - To aim: select the position, select the fixture, drag its dot, click **Apply**, then **OK**. **OK is what sends the move to the light.**
   - **Live preview:** while the Positions window is open, clicking a position in its list moves every mover to that position live, and dragging a dot moves that light live. Closing the window sends each fixture back to the position picked in its look's dropdown. So Tony may see lights jump around while positions are edited.
-  - **Cancel doesn't undo +:** a position added with + stays in the list even if you Cancel the Positions window.
+  - **The Positions window runs the hazer at full while it's open** (seen 2026-10-20). Unplug the hazer's DMX (or switch it off) while editing positions.
+- **The Positions window sometimes opens invisible.** Press Escape, wait a second, and open it again. **Apply closes it.**
+- **Cancel doesn't undo +:** a position added with + stays in the list even if you Cancel the Positions window.
   - **Stacked dots:** a new position puts every fixture at grid center. A drag grabs the topmost dot there, whichever fixture row is selected. Move dots one at a time and check which fixture got selected.
   - The Position dropdown in a look lists THRU, the positions in creation order, and any new one at the bottom.
 - **Typing an attribute value:** double-click the number next to an attribute slider (for example Gobo Wheel), press Cmd-A, type the value, then Return. That's more precise than the short slider, which runs 0-255.
+- **Static look edits save themselves:** changing a look in Perform mode writes the project's `SoundSwitchVenues.bin` right away, with no Save.
 - **Active Static Looks panel:** the eye icon toggles a look. **Clear all** turns every static look off. An active static look overrides the Autoloops on the fixtures it includes.
 
 ## How positions, looks and Autoloops fit together
@@ -135,6 +154,7 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 
 ## Gotchas
 - **Colors:** a Static Look's color defaults to 0,0,0, which is dark. **Always set white.**
+- **RGBW / RGBAW fixtures:** the color picker has separate **A, W and UV** sliders beside the RGB fields. A plain white (#ffffff) only drives R, G and B; on a quad-LED beam like the Pocket Beam that shows as three colored spots. For a true single white beam, set R/G/B to 0 and W to 255. In the picker, move between fields with Tab and finish with Apply: Return closes the picker.
 - **Sliders:** a Static Look slider must be moved before a 0 actually sends. Push it up, then back down.
 - **Black** on the Control One overrides everything.
 - **Mirror scanners:** pan and tilt map to unexpected room axes, so check each model. The R side of a mirrored-mount pair needs pan invert.

@@ -138,3 +138,13 @@ Known rough edges (check with music):
 - Too much red: #4 Call and Answer right after #3 Cherry Bounce. Recolor #4 or reorder.
 - More movement generally.
 - First, Tony researches the new Autoloop features and programs a scene himself so Claude can learn his method.
+
+## Tony's notes (2026-10-20), before any more programming
+- **Talk first.** Before programming anything new, Tony wants a long conversation about how all of this should work. Don't build Autoloops until that's happened.
+- **Visual interest is still missing** from the Autoloops built so far.
+- **Intense is allowed.** The music supports very intense shows. Every fixture has to play a part.
+- **The 110s can do dramatic sweeps and blinding effects**, and so can the rest of the rig.
+- **The Shocker (W Shocker 417) doesn't seem to do any work in the Autoloops.** Find out why (is it in the loops, is its profile mapped, does Strobe/Blinder get anything from Autoscript?) and give it a real job.
+- **Haze (Tony):** fan always at 100% (ch2 = 255); Tony varies the smoke by hand. Keep haze out of the Autoloops and give him manual haze controls (static looks at a few smoke levels, all with fan 255).
+- **A position is a look, not a target (Tony).** A named position doesn't have to send every light to the same spot: each mover can aim somewhere different, as Cross and Lanes already do. Design positions as spatial compositions (fans, walls, tunnels, ceiling, splits) and use them as building blocks in the loops.
+- **Use the gobos creatively across fixtures.** Both the Scan 110s and the Vortex have colored glass gobos; see `notes/gobos.md`.

@@ -47,7 +47,7 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - **Static Look "Vortex Show"** (Bank 4) runs the Vortex's built-in program (Show 134) with a medium barrel spin. Switch it on alongside the Autoloops. The Autoloops can't change the Vortex by themselves.
 - **Static Looks "Vortex Slow / Medium / Fast"** (Bank 4, row 4) are the same show at three Show Speeds and barrel speeds. **"841 Fade"** (row 3, slot 2) is the logo with 2 s fades. Details: `notes/calibration.md`.
 - **Mac setup:**
-  - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude.ssproj`. Always use the **disk venue**. The USB venue is the Control One copy.
+  - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude-1020.ssproj` (newest). Always use the **disk venue**. The USB venue is the Control One copy.
   - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Claude watches its Live View in the Claude app's built-in browser (account.ring.com, signed in) and restarts it when it times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
@@ -58,7 +58,8 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - None of it has been seen on the lights. Run Bank 3 with music, BPM on and haze.
 - Claude-0000 is unchanged (round 1 only). Claude.ssproj is the 2026-10-06 22:10 fallback.
 
-- **Claude Code on the MacBook - start here (2026-10-20):** build two custom profiles in Fixture Manager (computer use, like before), and apply both in one Update Fixtures pass: the Scan 110s (going dark + gobos mapped to colors) and the Vortex (Black and idle glow, colors from its gobo wheel). Everything you need is in `notes/handoff-fixture-profiles.md`; the manuals are in `manuals/`. Ask Tony before Update Fixtures.
+- **Start here (2026-10-22):** Tony is reviewing **`Claude-1021.ssproj`**, a test copy of Claude-1020 with the right-side movers (R1-R3 110s, F5 Spot 14) set to Mover (Secondary) and an Autoscripted loop "AS Test Tech House" in Bank 1, slot 17 (`notes/session-log.md`, 2026-10-21). Keep it or go back to Claude-1020 on his word. The Shocker now works at **450-457** with the custom zone profile. Official video findings: `notes/soundswitch-videos.md`.
+- **Start here (after 2026-10-20 evening):** working project **`/Users/tonyw/Dropbox/SoundSwitch/Claude-1020.ssproj`**. Party is **Saturday 2026-10-24** (80s/90s 1 h, tech house headliner 2 h, 80s/90s to close; DJs bring laptops, Ableton Link hoped for); Tony wants it done Friday. Done 10-20: Scan 110 and Vortex color profiles applied, hazer on DMX, Haze Low/Med/High and Pocket White looks, Pocket Beam re-aimed except Ball. **Open, in order:** (1) Tony aims Pocket Beam on Ball; (2) check the Autoloops' global "smoke" cue (could fire the hazer), and set it to 0, since Tony wants haze manual; (3) check that the existing Autoloops and Vortex looks survived Update Fixtures; (4) tempo source for Saturday: test Ableton Link with a DJ laptop, BPM Detection (a USB audio interface works best) and Standalone + BPM TAP (TAP only works in Standalone). Set BPM Detection's silence option to Blackout: a paused or tempo-less Autoloop holds its last frame lit (seen 10-20: steady amber with no look active); (5) Tony Autoscripts a Virtual DJ track so Claude can learn his method; (6) the design conversation (`notes/stacks.md`, 2026-10-20) before building stacks. Clicking goes through `tools/ui.py` while Claude 3.1623.0's click tool is broken (`notes/fixes-and-issues.md`); release full-screen control while using it.
 
 0. **Tony's note:** pressing Black leaves the Vortex running when Vortex Show is on. See `notes/fixes-and-issues.md`; the test plan is Job V1 in `notes/handoff-fixture-profiles.md`.
 1. Add Lanes and Ball cues to some Bank 1 Autoloops (they were cued before those positions existed).
@@ -94,6 +95,9 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - `notes/stacks.md` - Autoloop stacks: plans, what got built, Tony's notes
 - `notes/autoscript.md` - Autoscript for Autoloops: how it works, dialog settings, user tips
 - `notes/design-research.md` - lighting-design research and Tony's references
+- `notes/soundswitch-kb.md` - what the SoundSwitch support knowledge base says (Link, Control One, Autoloops, Static Looks, profiles), with links
+- `notes/soundswitch-videos.md` - what SoundSwitch's own YouTube videos say (groups vs types, why lights move as one, making loops dynamic, Saturday checklist); topic sheets and a video index in `notes/videos/`
+- `notes/gobos.md` - gobo colors and shapes for the Scan 110s and Vortex, and ideas for using them
 - `notes/handoff-fixture-profiles.md` - handoff for the custom Scan 110 and Vortex profiles (Claude Code on the MacBook)
 - `manuals/` - fixture manuals (PDF), indexed in `manuals/README.md`
 - `model/basement-rig-map.html` - 3D model (Three.js). Fixture data is in the `FX` array, in inches.

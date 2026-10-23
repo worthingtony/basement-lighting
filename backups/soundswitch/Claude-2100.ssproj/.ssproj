@@ -1,0 +1,25 @@
+{
+    "id": "{0B73D196-855E-462E-B265-2D8B9387D99F}",
+    "spectra": {
+        "blackoutOverride": false,
+        "colorsOverride": false,
+        "display": "",
+        "editMode": false,
+        "enabled": false,
+        "fullscreen": false,
+        "movementOverride": false,
+        "perfMode": false,
+        "strobeOverride": false,
+        "whiteOverride": false,
+        "windowHeight": 600,
+        "windowWidth": 800,
+        "windowX": 0,
+        "windowY": 0
+    },
+    "version": {
+        "build": 0,
+        "hotfix": 0,
+        "major": 2,
+        "minor": 11
+    }
+}

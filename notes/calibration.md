@@ -34,6 +34,17 @@
 
 **Physical aim rule for the front bar:** tip DOWN = pool toward the speakers, UP = toward the ball, left/right = across the floor.
 
+- **Pocket White (row 5, slot 4), made 2026-10-20:** only the Pocket Beam, white chip only (R/G/B 0, W 255), full, Tiny Ball. For aiming it.
+- **Haze Low / Haze Med / Haze High (row 5, slots 1-3), made 2026-10-20:** only the hazer (W Haze 141). Smoke 40 / 100 / 180, Fan 255 in all three (Tony: fan always 100%, smoke varied by hand). Part of Tony's toolkit of static looks to layer over the Autoloops. The Control One also has a SMOKE button; whether it runs the fan at 100% isn't checked yet.
+
+## Toolkit on the Control One (from the quickstart guide, `manuals/soundswitch-control-one-quickstart-guide.pdf`)
+- **AUTO LOOP button** toggles the 32-pad grid between Autoloops and **Static Looks**, so the toolkit looks (841, Mirror Ball, Vortex, Haze) fire from the pads, layered over whatever Autoloop is running.
+- **SHIFT + BPM/TAP** toggles **Ableton Link**. **AUTOLOOP OVERRIDE** ignores scripted tracks and plays Autoloops only.
+- **MOVEMENT, STROBE, HUE, SMOKE** launch effects; SPEED and COLOR knobs set their speed and color.
+- **Color pads** are color overrides; **SHIFT + color pad** is a **position override** (Position 1-9). Not checked: presumably the named positions in list order (Floor Center, Front of Floor, Tiny Ball, Back of Floor, Cross, Lanes, Ball, 841 Logo, DJ Booth). If so, Position 8 (841 Logo) and 9 (DJ Booth) leave every mover except Spot 1 at grid center.
+- **WHITE / BLACK / UV** are full-white, blackout and UV. **BLACK is a toggle** on Tony's unit (press once for black, again to release; Tony, 2026-10-20). The printed WHITE/BLACK/UV HOLD labels are presumably the SHIFT versions (momentary hold), not yet checked.
+- **Touch strip:** AUTOLOOP INTENSITY or Group 1-4 intensity.
+
 ## Named positions
 | Position | Target | Status |
 |---|---|---|
@@ -47,7 +58,7 @@
 | 841 Logo | Spot 1 with the custom 841 gobo (value 36) on the white block wall behind the bar, spinning slowly (Gobo Rotation 10, about one turn every 9 s). | Done 2026-10-06; Tony: "Perfect." The plan was the floor in front of the speakers, but the logo wouldn't focus well on the floor, so Tony aimed it at the bar's back wall himself and focused it. Spot 1 crosshair: 578, 471 (old frame). The slow spin means it reads upright once per turn; to hold it still and upright, turn the gobo 180° in its holder. Only Spot 1 is aimed: every other mover sits at grid center in this position, so don't use it in an Autoloop. |
 | (idea) Mini bar | A Spot on the mini bar. Tony may turn the mini bar into a DJ booth, which would change what this position should light. | Later |
 
-The Pocket Beam is on the tiny ball (429, 509) in **every** position, so it always lights it.
+The Pocket Beam is on the tiny ball in **every** position except Ball, so it always lights it. **Re-aimed 2026-10-20** after Tony hung it upside down and moved it: Tiny Ball aimed by Tony, then the same aim (Positions window grid, dot at 228, 443 in the 872x485 window) copied into Floor Center, Front of Floor, Back of Floor, Cross and Lanes. Ball: Tony aiming by eye. Use the **Pocket White** look (Bank 4 row 5 slot 4) while aiming: plain white shows three colored spots.
 
 ## Crosshair values (Edit Positions grid, screen pixels)
 These were read off the grid on the MacBook's screen. The grid center is about (510, 404), and the grid spans about ±164 px. Use them as starting points, not DMX values. They are relative to the dialog's position: if the SoundSwitch window moves, shift them by the same amount (on 2026-10-06 the window sat 25 px lower, so every Y was +25).
@@ -131,9 +142,9 @@ Identified 2026-10-06 from a slot-by-slot sweep Tony filmed, and matched to the 
 - Source: [Intimidator Spot 255 IRC user manual, Rev. 4](https://www.chauvetdj.com/wp-content/uploads/2016/01/Intimidator_Spot_255_IRC_UM_Rev4.pdf)
 
 ## Calibration and show looks (Static Looks, Bank 4)
-- **CAL Test (slot 1):** includes every fixture. Used to isolate one fixture at a time. Last state: the Vortex at full with Barrel Rotation 65, everything else at 0.
+- **CAL Test (slot 1):** includes every fixture except the hazer (Tony took it out 2026-10-20). Used to isolate one fixture at a time. Last state (2026-10-20): L1 Scan 149 at full on Gobo 14 (open), the Vortex at full on Gobo 60 with Show 0 and Barrel Rotation 65, the hazer at Smoke 120 / Fan 120, plus Spot 1 (841 Logo) and the Pocket Beam on. In Perform mode, look edits are written to the project immediately.
 - **841 (row 2, slot 3):** Spot 1 only. White, full, 841 Logo position, Gobo Wheel 36 (841 logo), Gobo Rotation 10 (slow spin). Puts the spinning logo on the wall behind the bar. Switch it on over any Autoloop. Made 2026-10-06.
-- **Mirror Ball (row 2, slot 4):** the Saber (52) on the big ball and the Pocket Beam (27) on the little ball (Tiny Ball position), both white at full. Tony: "perfect". Made 2026-10-06. Tony first tried the Pocket Beam on the big ball (Ball position), then chose the little ball for this look.
+- **Mirror Ball (row 2, slot 4):** the Saber (52) on the big ball and the Pocket Beam (27) on the little ball (Tiny Ball position), both at full. **Since 2026-10-20 the Pocket Beam's white is the white chip only (R/G/B 0, W 255):** a plain #ffffff lights its red, green and blue chips side by side (three squares, no white), while W alone gives one clean beam that lands on the ball. The look's color picker has separate A, W and UV sliders for this. Use the same W-only white for the Pocket Beam in Autoloops. Tony: "perfect". Made 2026-10-06. Tony first tried the Pocket Beam on the big ball (Ball position), then chose the little ball for this look.
 - **Vortex Show (row 1, slot 4):** includes only the Vortex. Full brightness, Barrel Rotation 65 (medium spin), Show 134 (built-in Show 4; the Vortex has 6). Tony likes it. Run it alongside the Autoloops.
 - **Vortex Slow / Medium / Fast (row 4, slots 1-3), made 2026-10-07:** copies of Vortex Show with the Vortex's **Show Speed** attribute ticked (it was already in the profile, so no Fixture Manager change was needed). Same Show 134 in all three.
   - Slow: Show Speed 10, Barrel Rotation 110 (slow CCW).
