@@ -88,7 +88,7 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 7. Hardware:
    - Repair R3 204 (it's already programmed).
    - Fix the hazer's DMX.
-   - Re-add one Pocket Roll.
+   - Measure where the bar lights (B SlimPAR 417, B Pocket Roll 40) are and add them to the 3D model.
    - Consider another LED pinspot (or a pinhole gobo) for the big ball.
    - Measure where the tiny ball and the Fog Fury are, and add them to the 3D model.
    - Track down the idle glow on the Vortex and the Scan 110s. The Vortex's own display (Information > DMXValue) shows what it receives, so it can stand in for a DMX tester.

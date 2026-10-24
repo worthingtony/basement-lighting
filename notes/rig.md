@@ -40,6 +40,8 @@ Listed from the front (speakers) toward the back.
 | R3 Scan 204 | 204-214 | 11 | Intimidator Scan 110 | 187 | 115 | 79 | Right I-beam, opposite 171. **Broken**, but it stays in programming. |
 | L Saber 52 | 52-63 | 12 | Saber Spot Go | 0 | 82 | 76 | Upright on the left I-beam, aimed back at the mirror ball |
 | WiFLY Bar QA5 (lounge) | 104-125 | 22 | WiFLY Bar QA5 (wireless DMX) | ~96 | ~-56 | 86 | Lounge behind the back wall, on the joists, aimed left at the fireplace. Its name won't change in SoundSwitch. |
+| B SlimPAR 417 | 417-423 | 7 (Mode 1) | Chauvet SlimPAR 56, library profile "SlimPAR 56 (Mode 1)" (R, G, B, colour macro, strobe, mode, dimmer). Wash (Primary), no group. | ? | ? | ? | Bar area, apart from the dance floor. Accent wash. Added 2026-10-24. |
+| B Pocket Roll 40 | 40-45 | 6 | ADJ Inno Pocket Roll, library profile "Inno Pocket Roll (Color Wheel)" (pan, tilt, strobe, colour wheel, dimmer, dimmer mode). Mover (Primary), no group. | ? | ? | ? | Bar area, apart from the dance floor. Added 2026-10-24. |
 
 **Other details:**
 - All Scan 110s hang at 6'7". They are spaced about 5' (60") apart along each beam.
@@ -47,7 +49,7 @@ Listed from the front (speakers) toward the back.
 - **Tiny mirror ball:** sits in front of the Fog Fury and is lit by the Pocket Beam. Its exact position hasn't been measured yet.
 
 **Not patched:**
-- **Pocket Rolls:** removed. One was moved to another part of the basement and should be re-added.
+- **Pocket Rolls:** one was re-added at the bar as B Pocket Roll 40 (2026-10-24); the other is gone.
 - **Laser** (to the right of Spot 14): not enabled and not patched.
 
 ## Groups
