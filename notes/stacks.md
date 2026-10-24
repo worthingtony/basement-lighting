@@ -152,4 +152,5 @@ Known rough edges (check with music):
 ## Tony's notes (2026-10-23), after the first Autoscript test
 - **"Way too much Shocker in everything, but not bad."** The Autoscripted loop with the sides split Primary/Secondary is worth building on.
 - **Brightness can be 100%:** he dials it down live with the Autoloop intensity fader.
+- **AS Test Tech House v2 (2026-10-23 23:03):** Base 74%, palette blue / magenta / violet + white highlight, Shocker off for bars 1-8 and program 4 from bar 9 with the prism at bar 10. Waiting for Tony to watch it.
 
