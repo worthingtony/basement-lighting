@@ -48,11 +48,11 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
 - **Static Looks "Vortex Slow / Medium / Fast"** (Bank 4, row 4) are the same show at three Show Speeds and barrel speeds. **"841 Fade"** (row 3, slot 2) is the logo with 2 s fades. Details: `notes/calibration.md`.
 - **Static Looks "Blinder Sweep / Blinder Sweep Fast / Blinder Tilt"** (Bank 4, row 7 slots 1-3): every light open white at full, the Shocker solid, all movers sweeping together. Switch one on for a hit. Details: `notes/rig.md`.
 - **Mac setup:**
-  - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude-1021.ssproj` (newest). Always use the **disk venue**. The USB venue is the Control One copy.
+  - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude-1024.ssproj` (newest; a copy of Claude-1021 as of 2026-10-24 15:07, with Tony's bank names and the bar lights). Always use the **disk venue**. The USB venue is the Control One copy.
   - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Claude watches its Live View in the Claude app's built-in browser (account.ring.com, signed in) and restarts it when it times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
-**Party day, 2026-10-24 - start here.** Project `Claude-1021.ssproj`, saved 04:14.
+**Party day, 2026-10-24 - start here.** Project `Claude-1024.ssproj` (copy of Claude-1021, 15:07).
 1. **A macOS prompt is waiting on the Mac's screen** ("Claude is requesting to bypass the system private window picker..."). It's Tony's call; nothing here needs it (`notes/fixes-and-issues.md`).
 2. **Watch the new banks with music** (Perform > Autoloops, BPM on): Bank 2 for the 80s/90s sets, Banks 1 and 3 for tech house. Note any loops to drop or reorder; none have been seen on the lights.
 3. **Try the Blinder looks** (Static Looks Bank 4 row 7) over a playing loop. If the scanners sweep the wrong way, swap the Sweep and Tilt names.
