@@ -22,6 +22,7 @@ click landed on SoundSwitch's window behind it (2026-10-20).
   ui.py type TEXT
   ui.py key COMBO                (cmd+shift+s, return, escape, tab, ...)
   ui.py expectmenu X Y H         (stop unless an H-pt-tall menu opened at X Y)
+  ui.py expectwin X Y W H        (stop unless an app window has these bounds, in points)
   ui.py batch FILE               (one command per line; "sleep N" allowed)
   ui.py activate APP             (SoundSwitch or FixtureManager)
 """
@@ -88,6 +89,11 @@ def frontmost():
 
 def guard():
     app = frontmost()
+    if only_app and app != only_app:
+        # Something else (a notification, a terminal) took the front: bring the app back once.
+        subprocess.run(["open", "-a", only_app], check=False)
+        time.sleep(1.0)
+        app = frontmost()
     if app not in ALLOWED:
         sys.exit(f"REFUSED: frontmost app is {app!r}, not SoundSwitch or FixtureManager")
     if only_app and app != only_app:
@@ -236,6 +242,17 @@ def expect_menu(x, y, height):
     sys.exit(f"REFUSED: no {height}-pt menu at {x},{y}")
 
 
+def expect_window(x, y, w, h):
+    # Refuse to go on unless a window (a dialog dragged into place) has exactly these bounds.
+    want = [float(v) for v in (x, y, w, h)]
+    for _ in range(15):
+        for r in windows(only_app or "SoundSwitch"):
+            if all(abs(a - b) <= 2 for a, b in zip((r.x, r.y, r.w, r.h), want)):
+                return
+        time.sleep(0.2)
+    sys.exit(f"REFUSED: no window at {x},{y} {w}x{h}")
+
+
 def run(args):
     cmd = args[0]
     if cmd == "front":
@@ -272,6 +289,8 @@ def run(args):
         key(args[1])
     elif cmd == "expectmenu":
         expect_menu(args[1], args[2], args[3])
+    elif cmd == "expectwin":
+        expect_window(*args[1:5])
     else:
         sys.exit(f"unknown command {cmd}")
 
