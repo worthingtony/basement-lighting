@@ -93,6 +93,7 @@ Switch one on over any Autoloop for a hit, then off. Every light except the haze
 | Blinder Sweep | row 7 slot 1 | Everything open white at full; Shocker dimmer full with all four zones solid. Spots, Scan 110s and Scan 360s on Floor Center with Scan Horizontal at 50% speed (Spots at about 80% size, scanners 50%). Saber full, Vortex full. |
 | Blinder Sweep Fast | row 7 slot 2 | The same with every mover's speed at about 85%. |
 | Blinder Tilt | row 7 slot 3 | The same as Blinder Sweep, with Scan Vertical, so the beams sweep up and down through the crowd. |
+| Blinder Tilt 110s | row 7 slot 4 | Only the six Scan 110s: white, full, Floor Center, Scan Vertical at 50% speed and size. Everything else keeps following the Autoloop. (Tony, 2026-10-24) |
 
 - Not seen on the lights yet. On the mirror scanners (Scan 110, Scan 360), "horizontal" and "vertical" may come out swapped in the room; if so, swap the two looks' names.
 - Static looks aren't beat-synced. Whether the Performance Mode "Movement Rate" knob also speeds up a look's movement is untested.
