@@ -109,3 +109,8 @@
   - Not seen on the lights yet.
 - The in-app info (i) button next to the Autoscript preset opens a general Feature Guide, not a per-preset breakdown.
 
+## 2026-10-23
+- PR #3 (profiles, Shocker, video notes) merged at 20:14.
+- **Tony reviewed "AS Test Tech House" (Claude-1021):** "way too much shocker in everything but not bad." Brightness can be 100%, since he can dial it down live. The Shocker is everywhere because its empty track copies the Main Track in every loop (it's the only light that has no programming of its own in any loop).
+- Tony is running loops live in Perform mode on Claude-1021 with Virtual DJ connected (OS2L).
+

@@ -148,3 +148,8 @@ Known rough edges (check with music):
 - **Haze (Tony):** fan always at 100% (ch2 = 255); Tony varies the smoke by hand. Keep haze out of the Autoloops and give him manual haze controls (static looks at a few smoke levels, all with fan 255).
 - **A position is a look, not a target (Tony).** A named position doesn't have to send every light to the same spot: each mover can aim somewhere different, as Cross and Lanes already do. Design positions as spatial compositions (fans, walls, tunnels, ceiling, splits) and use them as building blocks in the loops.
 - **Use the gobos creatively across fixtures.** Both the Scan 110s and the Vortex have colored glass gobos; see `notes/gobos.md`.
+
+## Tony's notes (2026-10-23), after the first Autoscript test
+- **"Way too much Shocker in everything, but not bad."** The Autoscripted loop with the sides split Primary/Secondary is worth building on.
+- **Brightness can be 100%:** he dials it down live with the Autoloop intensity fader.
+
