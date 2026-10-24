@@ -179,4 +179,8 @@ Built with the approved recipe and `tools/bankfill/build.py`. Every loop: Autosc
   - Each palette is Primary / Secondary / Tertiary / Highlight; the RGB values are in `tools/bankfill/build.py`.
 - **Position order** changes every 8 slots (4 variants), so loops with the same palette move differently. For example, slots 1-8: Main 1 = Floor Center, Cross, Lanes, Back of Floor; Main 2 = Front of Floor, Cross, Floor Center, Lanes.
 - **Shocker program** per slot: P((slot-1) x 3 mod 8 + 1), so neighbours use different programs. Bursts stay 2 bars, as Tony asked.
-- **Order isn't curated yet.** The banks are full but not arranged as stacks that flow; same-palette loops are 8 slots apart. That's the next pass, after Tony has seen them on the lights.
+- **Arranged into flow (2026-10-24 morning, Tony: "arrange them into flow").** Each bank runs as four laps of 8 through a colour chain where each loop shares a hue with the next, and no two neighbours share a preset or a position order (`tools/bankfill/flow.py` searches for that). Names were renumbered to match the new slots, so the palette names are the same and the numbers changed.
+  - TH: Cyan Blue, Teal Magenta, Blue Magenta, Violet Pink, Amber Magenta, Amber Blue, Red White, Blue Warm, then back to Cyan Blue. AS Test Tech House is the Blue Magenta of the first lap (slot 3).
+  - 80s: Miami, Lavender Teal, Purple Gold, Pink Yellow, Sunset, Red Blue, Electric Blue, Neon Pink Cyan.
+  - PK: Red White, Gold White, Orange Teal, Pink Cyan, Magenta Red, UV Purple, Blue Red, Ice Blue (the three red palettes are never next to each other).
+  - Energy isn't shaped yet: the laps don't build or drop. Play the banks Sequential.

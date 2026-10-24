@@ -121,6 +121,7 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Make a light go dark:** select a range on its track, then press **Shift+O** (Create Intensity Override). That gives a flat 0 line, which overrides the Main Track. An empty track inherits the Main Track, which is why stock loops look all-on.
 - **Remove an override:** select the range and press **Shift+Cmd+Delete**. That clears the track's data and overrides, so it inherits again.
 - **Positions:** drag a position from the Positions panel onto the lane just above the bar ruler.
+- **Reorder by dragging:** drag a slot by its bar-count ("16") end onto another slot; it inserts there and the others shift down. If drags stop registering (after a save), right-click a slot and press Escape first.
 - **Rename / Delete / Duplicate:** right-click the Autoloop slot. Duplicate fails when all 128 slots are full, so delete a stock loop first. Deleting shifts every later loop up one slot across banks. A duplicate lands in the last slot; drag it to where you want it.
 - **Save:** Cmd-S saves the project in Edit mode, and the "Saving Project / Completed" dialog confirms it.
 - **The Main Track needs its own color.** A loop copied after clearing can end up with no Main Track color at all; then lights without their own color get no defined color. Fix: right-click the Main Track color lane (just above the position lane) > Select Color Track, then right-click > Apply Color.

@@ -10,6 +10,7 @@ Scripts that filled Autoloop Banks 1-3 overnight on 2026-10-24 with the recipe T
 - `run.sh N` runs N steps from `pos.txt` (an index into `seq.py`'s order) and stops on the first failure;
   `hasname.py` checks each new name in the saved project.
 - `sl.py`, `openlook.py`, `white.py` drive the Static Look editor (used for the Blinder looks).
+- `flow.py BANK` prints the flow order; `reorder.py BANK STATEFILE [N]` drags the bank's slots into it (STATEFILE holds the current order as original slot numbers); `renumber.py BANK` prints a batch that renames every slot to match.
 
 Window positions are environment variables (`MX MY` main window, `DX DY` dialog). Every batch checks the
 windows it expects (`expectwin`, `expectmenu`) before clicking.
