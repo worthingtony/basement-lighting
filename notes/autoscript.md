@@ -47,3 +47,10 @@ Researched 2026-10-07 night: web search plus opening the dialog in SoundSwitch 2
 - **Re-applying deletes hand-placed attribute cues** on the Main Track. Autoscript only places Main 1 cues in a 16-bar Autoloop (bars 1-8); Main 2 cues have to be dragged on by hand.
 - The cue table scrolls with the wheel; check which row a click lands on, since the scroll amount varies.
 
+## Gotchas (2026-10-24, filling 95 slots by script)
+- **Pick the preset with the keyboard.** The preset list scrolls to the current preset, so clicking a row by position lands on the wrong one, and the wheel froze the app before. Open the list, press Up 12 times and Return (that lands on Base Styles), then open it again and press Down N times and Return. Order below Base Styles: Dynamic 1-6, Dance 1, Dance 2, Random Color 1, Random Color 2.
+- **"Cue data missing" popup** (One or more cue selections have not been specified) appears on Apply when a Main 2 cue column is empty. Tick "Don't show again" and choose "Continue anyway". That setting is lost if SoundSwitch is force-quit.
+- **Apply rewrites a hand-built loop's fixture tracks.** Checked by eye on R2 1 Deep Blue: its hand-made blocks were gone after Apply. Not checked track by track.
+- The dialog is a separate window and can be dragged by its title bar; the colour picker opens relative to it (+349, +228).
+- SoundSwitch froze once (2026-10-24 00:10) with the dialog open after a few hundred scripted clicks. Save after every slot.
+

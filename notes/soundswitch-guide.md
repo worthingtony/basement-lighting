@@ -84,6 +84,10 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
   - **Color:** double-click the swatch to open the Color Picker. White is in the Recent swatches. Click Apply.
   - **Position:** THRU means no position control. Otherwise pick a named position.
   - **Attributes:** click a fixture's name to show them on the right, for example the Vortex's Barrel Rotation and Show.
+  - **Movement dropdown** (movers only): No Movement, Circle, Scan Horizontal, Scan Vertical, Oval Horizontal / Vertical, Figure 8 Horizontal / Vertical, Square, Triple 8 Horizontal / Vertical. Once a movement is picked, a **⋮** next to it opens **Size** and **Speed** sliders for that fixture (both 50% by default); click ⋮ again to fold them away.
+  - **Columns reflow** when Movement content or an open ⋮ changes width, so re-check where Include / Color / Intensity sit before clicking.
+  - **Multi-cell fixtures** have a triangle on their row: the WiFLY bar's five cells each have their own colour and intensity; the Shocker's four zone cells each have a Strobe slider (slider at the top = solid on).
+  - **Copy / Paste:** right-click a look > Copy, then right-click an empty slot > Paste. The copy is named "<name> copy" and keeps every setting.
 - **Edit Positions** (button at the top right of the look settings):
   - Every mover appears as a dot on a grid. A hollow dot is the mirrored output of a pan-inverted fixture.
   - The fixture list has the P/T invert toggles. The Position list has **+** to add a position, and you double-click a position to rename it. A new position starts with every fixture at the grid center.

@@ -38,19 +38,27 @@ Tony's basement nightclub is called **Studio 841** (the custom 841 gobo reads "8
   - Lanes and Ball are done (2026-10-06). In Ball the Pocket Beam lights the big ball; it sits on the tiny ball in every other position.
   - "841 Logo" is done: Spot 1 throws the custom 841 gobo (value 36) onto the wall behind the bar, with a slow spin (Gobo Rotation 10). It aims only Spot 1, so never put it on the Main Track. Tony (2026-10-07): **the logo can go in Autoloops, strategically**, as a moment rather than wallpaper. The way to do it is a Position Override on Spot 1's track only (Shift+P), plus the gobo as an attribute cue.
   - Spot 1 gobo map: `notes/calibration.md`.
-- **Autoloops (in Claude-0000.ssproj):**
-  - Bank 1 is the hand-built EDM / tech house stack: Blue Hour, Scissors, Cherry Bounce, Call and Answer, The Sweep, Spiral Peak, One Beam, Blue Return.
-  - **Correction:** each bank holds 32 Autoloops, and clicking a bank's name in the Autoloop panel switches banks. The 5 "80s" looks were built in **Bank 1 slots 9-13**, not Bank 2 (confirmed 2026-10-07). They need moving to the real Bank 2, to keep the genres apart.
-  - **Bank 3 slots 1-8 (Claude-2100.ssproj):** the round 2 EDM stack, "R2 1" to "R2 8".
+- **Autoloops (Claude-1021.ssproj, filled 2026-10-24 overnight with the recipe Tony approved):**
+  - Bank 1 "TH 01-32" = tech house groove (slot 17 keeps "AS Test Tech House"). Bank 2 "80s 01-32" = 80s / 90s. Bank 3 "PK 01-32" = tech house peak. Bank 4 is Tony's. Details: `notes/stacks.md`, "Banks 1-3 filled".
+  - Each bank holds 32 Autoloops, and clicking a bank's name in the Autoloop panel switches banks.
+  - The old hand-built stacks (Bank 1 round 1, the five 80s looks, Bank 3's R2 1-8) were overwritten; they're in `backup-2026-10-23/Claude-1021-before-bank-fill.ssproj` and in Claude-0000 / Claude-2100.
 - **Static Look "841"** (Bank 4, row 2 slot 3) puts the spinning 841 logo on the wall behind the bar. Switch it on over any Autoloop.
 - **Static Look "Mirror Ball"** (Bank 4, row 2 slot 4): Saber on the big ball, Pocket Beam on the little ball.
 - **Static Look "Vortex Show"** (Bank 4) runs the Vortex's built-in program (Show 134) with a medium barrel spin. Switch it on alongside the Autoloops. The Autoloops can't change the Vortex by themselves.
 - **Static Looks "Vortex Slow / Medium / Fast"** (Bank 4, row 4) are the same show at three Show Speeds and barrel speeds. **"841 Fade"** (row 3, slot 2) is the logo with 2 s fades. Details: `notes/calibration.md`.
+- **Static Looks "Blinder Sweep / Blinder Sweep Fast / Blinder Tilt"** (Bank 4, row 7 slots 1-3): every light open white at full, the Shocker solid, all movers sweeping together. Switch one on for a hit. Details: `notes/rig.md`.
 - **Mac setup:**
-  - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude-1020.ssproj` (newest). Always use the **disk venue**. The USB venue is the Control One copy.
+  - Project file: `/Users/tonyw/Dropbox/SoundSwitch/Claude-1021.ssproj` (newest). Always use the **disk venue**. The USB venue is the Control One copy.
   - For calibration, the Ring "Dance floor" camera on the back wall faces the speakers. Claude watches its Live View in the Claude app's built-in browser (account.ring.com, signed in) and restarts it when it times out (about every 5 minutes). A phone photo from the back is best for checking overlap.
 
 ## Next up
+**Party day, 2026-10-24 - start here.** Project `Claude-1021.ssproj`, saved 04:14.
+1. **A macOS prompt is waiting on the Mac's screen** ("Claude is requesting to bypass the system private window picker..."). It's Tony's call; nothing here needs it (`notes/fixes-and-issues.md`).
+2. **Watch the new banks with music** (Perform > Autoloops, BPM on): Bank 2 for the 80s/90s sets, Banks 1 and 3 for tech house. Note any loops to drop or reorder; none have been seen on the lights.
+3. **Try the Blinder looks** (Static Looks Bank 4 row 7) over a playing loop. If the scanners sweep the wrong way, swap the Sweep and Tilt names.
+4. Before the party: File > Export to Control One (ask Tony first), if the Control One should carry the new loops.
+5. Rename the Autoloop banks (they still read "Dynamic / Upbeat / Smooth") if Tony wants: Tech House, 80s 90s, Peak.
+
 **Morning of 2026-10-08 - start here.** The newest file is `/Users/tonyw/Dropbox/SoundSwitch/Claude-2100.ssproj`. It's Claude-0000 plus last night's work:
 - **Bank 3 slots 1-8: the round 2 EDM stack** ("R2 1 Deep Blue" to "R2 8 Blue Return"), built with Autoscript and then hand-edited to Tony's notes. Compare it with round 1 in Bank 1 slots 1-8. See `notes/stacks.md`, "Round 2".
 - **Static Looks Bank 4:** Vortex Slow / Medium / Fast (row 4) and 841 Fade (row 3, slot 2). The pulsing logo is the Autoloop "R2 7 841 Breakdown".

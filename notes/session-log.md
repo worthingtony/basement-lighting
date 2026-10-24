@@ -129,3 +129,13 @@
 - Perform > Autoloops: the progress fill is drawn on the playing pad and on the bank header. Repeat Autoloop resets to off after a mode switch.
 - **23:30 Tony: "It's good"** about AS Test Tech House v3 (full brightness, palette, 2-bar Shocker bursts). Recipe written up in `stacks.md`.
 
+## 2026-10-24 (overnight, Tony asleep; "Go ahead, take control. Build the blinder sweeps and fill banks 1, 2 and 3.")
+- **Banks 1-3 filled with the approved recipe** in `Claude-1021.ssproj`, one slot at a time with `tools/bankfill/` (Autoscript dialog filled by script, then Apply, Shocker cues, rename, Cmd-S). Every slot's new name was checked in the saved project before moving on, and a screenshot of the dialog was checked every 8-11 slots.
+  - Bank 1 "TH 01-32" (tech house groove), skipping slot 17, which keeps **AS Test Tech House**. Bank 2 "80s 01-32". Bank 3 "PK 01-32" (tech house peak). 95 loops, 00:05-03:57, about 2 min 20 s each.
+  - **Overwritten:** Bank 1's hand-built stack (Blue Hour ... Blue Return) and the five "80s" looks in Bank 1 slots 9-13; Bank 2's stock Upbeat loops; Bank 3's round 2 stack (R2 1-8) and stock Smooth loops. All of it is in `backup-2026-10-23/Claude-1021-before-bank-fill.ssproj`.
+  - Autoscript replaced the hand-made fixture-track data it could see on R2 1 (the old blocks and pulse rows were gone after Apply). Only checked by eye on that one loop.
+  - Backups after each bank: `backup-2026-10-23/Claude-1021-after-slot4`, `-after-bank1`, `-after-bank2`, `-after-bank3`, `-after-blinders`.
+- **00:10 SoundSwitch froze** with the slot 5 dialog open (no clicks, no menu bar). Force-quit and reopened Claude-1021; slots 1-4 had been saved. The window came back 1800x1130; resized to 1591x941 at (0,126). The force-quit also lost the "Cue data missing: Don't show again" setting, so the popup came back once and was ticked again.
+- **00:20 macOS prompt left on screen for Tony:** "Claude is requesting to bypass the system private window picker and directly access your screen and audio" (Allow / Open System Settings). It was triggered by a `screencapture` run from the shell. It's a security permission, so it was left unanswered. It sits over the middle of the screen (770,240, 260x348 pts), so the Autoscript dialog was dragged to (0,300) and the Static Look editor to (309,610) for the rest of the night, and the scripts refuse any click inside the prompt.
+- **04:00-04:14 Blinder looks built** (Static Looks, Bank 4 row 7): **Blinder Sweep**, **Blinder Sweep Fast**, **Blinder Tilt**. Details in `rig.md`. Built in Perform mode; Static Look edits save themselves, and the project was also saved from Edit mode at 04:14:49.
+- Not seen on the lights: none of the 95 loops, and none of the Blinder looks.

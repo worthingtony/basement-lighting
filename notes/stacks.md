@@ -163,3 +163,20 @@ Known rough edges (check with music):
 3. **By hand after Apply** (Autoscript drops Main 2 cues and anything placed by hand earlier): drag onto the cue lane Shocker program at bar 9, Prism Spots + 360s at bar 10, Shocker Off at 11, program again at 13, Shocker Off at 15. **Shocker bursts stay short (2 bars):** Tony: bright is fine for a few seconds, too much when it's on longer.
 4. Save with Cmd-S in Edit mode.
 
+## Banks 1-3 filled (2026-10-24 overnight, Claude-1021)
+Built with the approved recipe and `tools/bankfill/build.py`. Every loop: Autoscript base 99%, pulse 100%, Color Change Speed slow, Custom Colors on, Apply Movement and Strobe on, floor positions only (no Tiny Ball, Ball, 841 Logo or DJ Booth), then Shocker cues placed by hand and the slot renamed `<prefix> <slot> <palette>`.
+
+| Bank | Names | Feel | Presets rotated through | Shocker cues (bar) |
+|---|---|---|---|---|
+| 1 | TH 01-32 (slot 17 = AS Test Tech House) | tech house groove | Dance 1, Dynamic 1, Dance 2, Dynamic 2, Dynamic 3 | Off 1, program 9, prism 10, Off 11, program 13, Off 15 |
+| 2 | 80s 01-32 | 80s / 90s | Dynamic 1, 2, 5, 6, Dance 2, Random Color 1 | Off 1, prism 10, program 13, Off 15 |
+| 3 | PK 01-32 | tech house peak | Dynamic 4, 5, 6, Dance 1, Dance 2, Random Color 2 | Off 1, program 5, Off 7, program 9, prism 10, Off 11, program 13, Off 15 |
+
+- **Palettes** (8 per bank, slot n uses palette (n-1) mod 8, so slots 1, 9, 17, 25 share one):
+  - TH: Blue Magenta, Amber Blue, Teal Magenta, Blue Warm, Violet Pink, Amber Magenta, Cyan Blue, Red White.
+  - 80s: Neon Pink Cyan, Miami, Sunset, Purple Gold, Pink Yellow, Electric Blue, Red Blue, Lavender Teal.
+  - PK: Red White, Ice Blue, Magenta Red, Gold White, UV Purple, Blue Red, Pink Cyan, Orange Teal.
+  - Each palette is Primary / Secondary / Tertiary / Highlight; the RGB values are in `tools/bankfill/build.py`.
+- **Position order** changes every 8 slots (4 variants), so loops with the same palette move differently. For example, slots 1-8: Main 1 = Floor Center, Cross, Lanes, Back of Floor; Main 2 = Front of Floor, Cross, Floor Center, Lanes.
+- **Shocker program** per slot: P((slot-1) x 3 mod 8 + 1), so neighbours use different programs. Bursts stay 2 bars, as Tony asked.
+- **Order isn't curated yet.** The banks are full but not arranged as stacks that flow; same-palette loops are 8 slots apart. That's the next pass, after Tony has seen them on the lights.
