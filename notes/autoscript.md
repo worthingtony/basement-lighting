@@ -40,3 +40,10 @@ Researched 2026-10-07 night: web search plus opening the dialog in SoundSwitch 2
 - [SoundSwitch 2.9 announcement (128 Autoloops, reorder, duplicate, populate)](https://news.hummingbirdmedia.com/lighting-control-software-soundswitch-announces-version-29-with-auto-bpm-detection-and-enhanced-autoloop-features)
 - [bonedo: SoundSwitch 2.8 (phrase editing, Autoscript mixing, batch scripting)](https://www.bonedo.de/artikel/soundswitch-2-8-lighting-software-bringt-phrasenbearbeitung-verbessertes-batch-scripting-und-neue-styles/)
 - [Mixdown: SoundSwitch 2.11 (Static Looks overhaul, rekordbox)](https://mixdownmag.com.au/news/soundswitch-announce-soundswitch-2-11/)
+
+## Gotchas (2026-10-23)
+- **The dialog resets** to Base Styles with every position and cue at 0 each time it opens. Re-enter everything; it isn't remembered (contrary to the 10-07 note).
+- **Knobs follow the mouse angle**, not a vertical drag: drag from the knob's centre towards a clock position (7 o'clock = 0%, 12 = 50%, 5 o'clock = ~99%). A scroll-wheel notch moves it 1%.
+- **Re-applying deletes hand-placed attribute cues** on the Main Track. Autoscript only places Main 1 cues in a 16-bar Autoloop (bars 1-8); Main 2 cues have to be dragged on by hand.
+- The cue table scrolls with the wheel; check which row a click lands on, since the scroll amount varies.
+
