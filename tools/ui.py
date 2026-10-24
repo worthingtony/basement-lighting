@@ -21,6 +21,7 @@ click landed on SoundSwitch's window behind it (2026-10-20).
   ui.py scroll X Y DY            (DY lines; positive scrolls down)
   ui.py type TEXT
   ui.py key COMBO                (cmd+shift+s, return, escape, tab, ...)
+  ui.py expectmenu X Y H         (stop unless an H-pt-tall menu opened at X Y)
   ui.py batch FILE               (one command per line; "sleep N" allowed)
   ui.py activate APP             (SoundSwitch or FixtureManager)
 """
@@ -187,6 +188,54 @@ def type_unicode(ch):
         post(ev)
 
 
+cf = ctypes.cdll.LoadLibrary("/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation")
+cg.CGWindowListCopyWindowInfo.restype = ctypes.c_void_p
+cg.CGWindowListCopyWindowInfo.argtypes = [ctypes.c_uint32, ctypes.c_uint32]
+cg.CGRectMakeWithDictionaryRepresentation.restype = ctypes.c_bool
+cg.CGRectMakeWithDictionaryRepresentation.argtypes = [ctypes.c_void_p, ctypes.POINTER(CGRect)]
+cf.CFArrayGetCount.restype = ctypes.c_long
+cf.CFArrayGetCount.argtypes = [ctypes.c_void_p]
+cf.CFArrayGetValueAtIndex.restype = ctypes.c_void_p
+cf.CFArrayGetValueAtIndex.argtypes = [ctypes.c_void_p, ctypes.c_long]
+cf.CFDictionaryGetValue.restype = ctypes.c_void_p
+cf.CFDictionaryGetValue.argtypes = [ctypes.c_void_p, ctypes.c_void_p]
+cf.CFStringCreateWithCString.restype = ctypes.c_void_p
+cf.CFStringCreateWithCString.argtypes = [ctypes.c_void_p, ctypes.c_char_p, ctypes.c_uint32]
+cf.CFStringGetCString.restype = ctypes.c_bool
+cf.CFStringGetCString.argtypes = [ctypes.c_void_p, ctypes.c_char_p, ctypes.c_long, ctypes.c_uint32]
+
+
+def windows(owner):
+    """On-screen window bounds (points) belonging to the named app."""
+    key = lambda s: cf.CFStringCreateWithCString(None, s.encode(), 0x08000100)
+    k_owner, k_bounds = key("kCGWindowOwnerName"), key("kCGWindowBounds")
+    arr = cg.CGWindowListCopyWindowInfo(1, 0)
+    out = []
+    for i in range(cf.CFArrayGetCount(arr)):
+        d = cf.CFArrayGetValueAtIndex(arr, i)
+        buf = ctypes.create_string_buffer(256)
+        name = cf.CFDictionaryGetValue(d, k_owner)
+        if not name or not cf.CFStringGetCString(name, buf, 256, 0x08000100) or buf.value.decode() != owner:
+            continue
+        r = CGRect()
+        if cg.CGRectMakeWithDictionaryRepresentation(cf.CFDictionaryGetValue(d, k_bounds), ctypes.byref(r)):
+            out.append(r)
+    cg.CFRelease(arr)
+    return out
+
+
+def expect_menu(x, y, height):
+    # A context menu opens with its top-left at the click point. Refuse to go on unless one is
+    # there, so a following click on its first item can't land on a different item (Delete).
+    p = pt(x, y)
+    for _ in range(10):
+        for r in windows("SoundSwitch"):
+            if abs(r.x - p.x) <= 4 and abs(r.y - p.y) <= 4 and abs(r.h - float(height)) <= 2:
+                return
+        time.sleep(0.2)
+    sys.exit(f"REFUSED: no {height}-pt menu at {x},{y}")
+
+
 def run(args):
     cmd = args[0]
     if cmd == "front":
@@ -221,6 +270,8 @@ def run(args):
         type_text(" ".join(args[1:]))
     elif cmd == "key":
         key(args[1])
+    elif cmd == "expectmenu":
+        expect_menu(args[1], args[2], args[3])
     else:
         sys.exit(f"unknown command {cmd}")
 
