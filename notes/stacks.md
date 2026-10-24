@@ -154,3 +154,12 @@ Known rough edges (check with music):
 - **Brightness can be 100%:** he dials it down live with the Autoloop intensity fader.
 - **AS Test Tech House v2 (2026-10-23 23:03):** Base 74%, palette blue / magenta / violet + white highlight, Shocker off for bars 1-8 and program 4 from bar 9 with the prism at bar 10. Waiting for Tony to watch it.
 
+## The recipe Tony approved (2026-10-23, "It's good")
+"AS Test Tech House" (Claude-1021, Bank 1 slot 17) is the first loop Tony has signed off. Build the tech house stack the same way:
+1. **Patch:** matching lights split across types: left Scan 110s (L1-L3) and F1 Spot 1 = Mover (Primary); right Scan 110s (R1-R3) and F5 Spot 14 = Mover (Secondary). That's what makes the two sides do different things.
+2. **Autoscript** (AUTO): preset Dance Autoloop 1, **Base Intensity ~100%** (knob to 5 o'clock), Pulse 100%, Apply Movement and Strobe on, Colour Change Speed near Slow, **Custom Colors** = a chosen palette (here deep blue 0/40/255, magenta 255/0/160, violet 120/0/255, white highlight).
+   - Positions: floor positions only (Main 1: Floor Center 1, Cross 2, Lanes 3, Back of Floor 4; Main 2: Front of Floor 1, Cross 2, Floor Center 3, Lanes 4). Never Tiny Ball, Ball, 841 Logo, DJ Booth.
+   - Attribute cues: Shocker Off in Main 1.
+3. **By hand after Apply** (Autoscript drops Main 2 cues and anything placed by hand earlier): drag onto the cue lane Shocker program at bar 9, Prism Spots + 360s at bar 10, Shocker Off at 11, program again at 13, Shocker Off at 15. **Shocker bursts stay short (2 bars):** Tony: bright is fine for a few seconds, too much when it's on longer.
+4. Save with Cmd-S in Edit mode.
+
