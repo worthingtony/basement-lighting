@@ -165,3 +165,11 @@ Learned by driving it on 2026-10-05 and 2026-10-06. Screen positions assume the 
 - **Perform File menu:** "Import from Control One" sits right where Save Project sits in Edit mode. A mis-click on 2026-10-05 probably triggered it. The only visible effect was an extra "113" look.
 - **Photo Booth** pauses in the background. Bring it forward to refresh.
 - **Frozen after save (2026-10-06):** right after a save, SoundSwitch once stopped responding with the Edit-mode File menu drawn on screen. Don't click around in that menu blind: Export to Control One and Import from Control One are in it.
+
+## Attribute Cue editor (learned 2026-10-23)
+- **Return applies the cue and closes the editor.** Type a value, then press **Tab** to commit it, and click Apply. (In the Static Look editor Return does not close.) Keys sent after an early close land on the main window: keys 1-0 are intensity-pulse hot keys there.
+- The editor lists every fixture on the left; scroll to the bottom for the Shocker, click it, and its MASTER attributes (Auto Program, Auto Speed) show on the right with tick boxes and value fields.
+- **Right-click a cue: Duplicate / Delete / Rename.** Delete sits between the other two, so check the menu before clicking. A duplicate lands at the bottom of the list as "<name> copy".
+- The Attribute Cues list shows about 8 rows and the panel divider doesn't drag. Once the list overflows, the scroll wheel scrolls it.
+- **Shocker cues** (Claude-1021): Shocker P1-P8, Shocker Sound 1, Shocker Sound 2, Shocker Off. A program keeps running until another cue changes it, so follow a program with Shocker Off (assumed from how attribute cues hold; not yet checked across loop changes).
+

@@ -74,3 +74,12 @@ A pair shares a group. A one-off gets its own group.
 - **Project file:** `/Users/tonyw/Dropbox/SoundSwitch/Claude.ssproj`
 - **Venues:** the **disk venue** is the working copy. The **USB venue** is the Control One copy, which needs File > Export to Control One to update.
 - **Saving:** fixtures, looks, positions and Autoloops save with **File > Save Project**, which only exists in Edit mode. Save Lightshow (Cmd-S) saves the current track's script.
+
+## Shocker controls (2026-10-23, Claude-1021)
+| What | Where | Does |
+|---|---|---|
+| Strobe blocks in loops | Main Track or the Shocker's track | The only thing that fires it in a loop (zones rest off) |
+| Shocker Blinder | Static Look, Bank 4 row 6 slot 1 | Solid white, all four zones |
+| Shocker Program | Static Look, Bank 4 row 6 slot 2 | Runs one built-in program (edit the Auto Program value to change it) |
+| Shocker P1-P8, Sound 1, Sound 2, Off | Attribute Cues | Built-in zone programs (ch5 values 30-170, sound-active 200 / 240), and Off (0) |
+

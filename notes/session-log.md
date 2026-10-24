@@ -113,4 +113,10 @@
 - PR #3 (profiles, Shocker, video notes) merged at 20:14.
 - **Tony reviewed "AS Test Tech House" (Claude-1021):** "way too much shocker in everything but not bad." Brightness can be 100%, since he can dial it down live. The Shocker is everywhere because its empty track copies the Main Track in every loop (it's the only light that has no programming of its own in any loop).
 - Tony is running loops live in Perform mode on Claude-1021 with Virtual DJ connected (OS2L).
+- **21:41-22:43 Shocker made strobe-only and given programs** (Tony approved; all in Claude-1021):
+  - Fixture Manager: each zone's range in "Shocker Panel 180 USB Claude" changed to **0-255** (workspace saved 21:43, export updated). Backups first: `~/Dropbox/SoundSwitch/backup-2026-10-23/`.
+  - Patch: deleted the Shocker at 450 and re-added it from the Local library at 450 (no Update Fixtures, so no names wiped), type Strobe/Blinder as Tony had it, no group. Saved 21:48. The saved file differs from the backup in exactly four bytes (each zone's resting value 255 -> 0) plus a version counter.
+  - Static Looks, Bank 4 row 6: **Shocker Blinder** (slot 1; was Shocker Test: dimmer full, four zones at the top, master strobe 0) and **Shocker Program** (slot 2; dimmer full, Auto Program, Auto Speed 128). The re-added fixture had dropped out of the old look, so it had to be re-ticked.
+  - **Tested with Tony watching (22:27): dark at rest, Blinder solid white, Program 1 runs.** Then a tour of programs 2-8 and both sound-active modes (22:29-22:33); Tony: "Excellent. All."
+  - Attribute Cues (global presets, Edit mode): **Shocker P1-P8** (Auto Program 30, 50, 70, 90, 110, 130, 150, 170; speed 128), **Shocker Sound 1 / Sound 2** (200 / 240; ch6 is sound sensitivity in these modes, left at 128), **Shocker Off** (0). Saved 22:43.
 
