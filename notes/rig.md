@@ -83,6 +83,7 @@ A pair shares a group. A one-off gets its own group.
 | Strobe blocks in loops | Main Track or the Shocker's track | The only thing that fires it in a loop (zones rest off) |
 | Shocker Blinder | Static Look, Bank 4 row 6 slot 1 | Solid white, all four zones |
 | Shocker Program | Static Look, Bank 4 row 6 slot 2 | Runs one built-in program (edit the Auto Program value to change it) |
+| 110 Macro 1-12, 110 Macro Off | Attribute Cues (2026-10-24) | All six Scan 110s run a built-in movement macro: Movement Macros ch10 = 25, 45 ... 245 (macro n = 5 + 20n), Macro Speed ch11 = 128 (0 fast, 255 slow). Off sets the macro to 0. A macro keeps running until another cue changes it. |
 | Shocker P1-P8, Sound 1, Sound 2, Off | Attribute Cues | Built-in zone programs (ch5 values 30-170, sound-active 200 / 240), and Off (0) |
 
 ## Blinder looks (2026-10-24, Static Looks Bank 4 row 7, Claude-1021)
