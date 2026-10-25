@@ -50,7 +50,7 @@ Listed from the front (speakers) toward the back.
 
 **Not patched:**
 - **Pocket Rolls:** one was re-added at the bar as B Pocket Roll 40 (2026-10-24); the other is gone.
-- **Laser** (to the right of Spot 14): not enabled and not patched.
+- **Laser** (to the right of Spot 14): not enabled and not patched. SoundSwitch drives lasers through Attribute Cues (`soundswitch-kb.md`, "Lasers").
 
 ## Groups
 A pair shares a group. A one-off gets its own group.

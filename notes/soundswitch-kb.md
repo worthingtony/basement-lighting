@@ -80,6 +80,13 @@ Read on 2026-10-20 from support.soundswitch.com: all 10 folders (131 articles) w
 - **Wireless DMX:** wired is preferred. Test a link with the color overrides. [wireless]
 - **Saving:** Save Project saves the venue, fixtures, Autoloops, Static Looks and cues. Save Lightshow saves scripts. [saving]
 
+## Lasers, Nanoleaf and Philips Hue (logged 2026-10-25, Tony)
+- **Lasers:** most library laser profiles need **Attribute Cue control**. Set the laser to the DMX mode its manual names, then build Attribute Cues for each pattern, movement or effect you want, the same way as gobo and prism cues [attr]. Autoscript can place those cues in Autoloops, but **only once the cues exist**: "Without the creation of Attribute Cues first the Autoscript tool will not be able to control your Laser fixture." No models, patching steps or safety notes in the article. [laser]
+  - For Studio 841: the laser to the right of Spot 14 isn't patched yet (`rig.md`). Same route as the Shocker programs and the 110 macros: patch it, make one cue per pattern plus an Off cue, then add them to the loops or to Autoscript's Attribute Cues table.
+- **Nanoleaf:** Shapes and Lines are supported, over Wi-Fi (no DMX interface). The FAQ heading names SoundSwitch 2.6 and Engine DJ 2.3. A SoundSwitch licence is only needed for custom shows and DMX venues. Setup is in a video, not in writing. Nothing on how panels behave in Autoloops. [nanoleaf]
+- **Philips Hue (SoundSwitch 2.3+):** Hue Bridge on Ethernet, the computer on the same network, an **Entertainment Area** made in the Hue app. Then SoundSwitch Edit mode > Preferences (top right) > Hardware > **Enable Philips HUE** > Add New Bridge, and press the Bridge button when asked. Hue lights **only follow the Main Track** (no individual control), and the refresh rate may be too slow for fast pulses or strobes. [hue]
+  - For Studio 841: Hue could pull another room into the show, but only as one Main Track colour, which is the same role the lounge WiFLY plays now.
+
 ## Contradictions in the KB
 - **Bank size:** 4 x 8 (old intro) vs 4 x 32 (2.9+). Ours is 4 x 32.
 - **Export to Control One:** "fixture and Autoloop data" in one article vs "venue info, auto-loops, and static looks" in another.
@@ -127,3 +134,6 @@ Read on 2026-10-20 from support.soundswitch.com: all 10 folders (131 articles) w
 [rb]: https://support.soundswitch.com/en/support/solutions/articles/69000881391
 [wireless]: https://support.soundswitch.com/en/support/solutions/articles/69000865489
 [saving]: https://support.soundswitch.com/en/support/solutions/articles/69000853039
+[laser]: https://support.soundswitch.com/en/support/solutions/articles/69000847607
+[nanoleaf]: https://support.soundswitch.com/en/support/solutions/articles/69000847087
+[hue]: https://support.soundswitch.com/en/support/solutions/articles/69000847413
